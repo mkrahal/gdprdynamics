@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		GDPR Compliance 360
+	</title>
+
+	<!-- Font Selection -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<!--Custom Style Sheet -->
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'stylesheets/style.css' %}">
+	<!-- Embedded Shopify App (initlaize the EASDK to make This script detects if your app was loaded inside an iframe. If not, it will create a redirection back into the relative embedded URL in the Shopify admin. -->
+	<script src="https://cdn.shopify.com/s/assets/external/app.js"></script>
+  <script type="text/javascript">
+    ShopifyApp.init({
+      apiKey: '{{ SHOPIFY_API_KEY }}',
+      shopOrigin: '{{ shop_url }}'
+    });
+  </script> 
+
+</head>
+<body>
+
+
+{% block content %}
+{% endblock content %}
+
+</body>
+</html>

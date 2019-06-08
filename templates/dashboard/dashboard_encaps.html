@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>Home | GDPR Compliance 360</title>
+
+    <!-- Bootstrap 3.3.7-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!--Jquery-UI CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+
+    <!-- Custom Theme Style -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/custom.css' %}">
+
+    <!-- Embedded Shopify App (initlaize the EASDK to make This script detects if your app was loaded inside an iframe. If not, it will create a redirection back into the relative embedded URL in the Shopify admin.-->
+    {% include "dashboard/EASDK_InitializeJS.html" %}
+  </head>
+
+  <body class="nav-sm">
+
+    <!--{% load static %}
+    <div>
+    <img src="{% static 'images/app_icon.png' %}">
+    GDPR Compliance 360
+    </div>-->
+    {% include "dashboard/EASDK_TopBar.html" %}
+    <div class="container body">
+      <div class="main_container">
+        {% include "dashboard/menu.html" %}
+
+        {% block content %}
+        {% endblock content %}
+      </div>
+
+    </div>
+
+    
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    {% include "dashboard/homescripts.html" %}
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+    <script>
+      function init_chart_doughnut2(){
+		
+	    	if( typeof (Chart) === 'undefined'){ return; }
+	    	
+	    	console.log('init_chart_doughnut2');
+	     
+	    	if ($('.canvasDoughnut').length){
+	    		
+	    	var chart_doughnut_settings = {
+	    			type: 'doughnut',
+	    			tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+	    			data: {
+	    				labels: [
+	    					"Removal",
+	    					"Access",
+	    					"Consent",
+	    					"Data Assets",
+	    					"Data Events"
+	    				],
+	    				datasets: [{
+	    					data: [{{ total_removal_requests|default_if_none:0 }}, {{ total_rectification|default_if_none:0 }}, {{ data_assets_total|default_if_none:0 }}, {{ total_access_requests|default_if_none:0 }}, {{ processing_total|default_if_none:0 }}],
+	    					backgroundColor: [
+	    						"#BDC3C7",
+	    						"#9B59B6",
+	    						"#E74C3C",
+	    						"#26B99A",
+	    						"#3498DB"
+	    					],
+	    					hoverBackgroundColor: [
+	    						"#CFD4D8",
+	    						"#B370CF",
+	    						"#E95E4F",
+	    						"#36CAAB",
+	    						"#49A9EA"
+	    					]
+	    				}]
+	    			},
+	    			options: { 
+	    				legend: false, 
+	    				responsive: false 
+	    			}
+	    		}
+	    	
+	    		$('.canvasDoughnut').each(function(){
+	    			
+	    			var chart_element = $(this);
+	    			var chart_doughnut = new Chart( chart_element, chart_doughnut_settings);
+	    			
+	    		});			
+	    	
+	    	}  
+	       
+	    }
+
+      function init_gauge2() {
+			
+	    	if( typeof (Gauge) === 'undefined'){ return; }
+	    	
+	    	console.log('init_gauge2 [' + $('.gauge-chart').length + ']');
+	    	
+	    	console.log('init_gauge2');
+	    	
+
+	    	  var chart_gauge_settings = {
+	    	  lines: 12,
+	    	  angle: 0,
+	    	  lineWidth: 0.4,
+	    	  pointer: {
+	    		  length: 0.75,
+	    		  strokeWidth: 0.042,
+	    		  color: '#1D212A'
+	    	  },
+	    	  limitMax: 'false',
+	    	  colorStart: '#1ABC9C',
+	    	  colorStop: '#1ABC9C',
+	    	  strokeColor: '#F0F3F3',
+	    	  generateGradient: true
+	      };
+	    	
+	    	
+	    	if ($('#chart_gauge_01').length){ 
+	    	
+	    		var chart_gauge_01_elem = document.getElementById('chart_gauge_01');
+	    		var chart_gauge_01 = new Gauge(chart_gauge_01_elem).setOptions(chart_gauge_settings);
+	    		
+	    	}	
+	    	
+	    	
+	    	if ($('#gauge-text').length){ 
+	    	
+	    		chart_gauge_01.maxValue = 100;
+	    		chart_gauge_01.animationSpeed = 32;
+	    		chart_gauge_01.set({{ gauge_score }});
+	    		chart_gauge_01.setTextField(document.getElementById("gauge-text"));
+	    	
+	    	}
+	    	
+	    	if ($('#chart_gauge_02').length){
+	    	
+	    		var chart_gauge_02_elem = document.getElementById('chart_gauge_02');
+	    		var chart_gauge_02 = new Gauge(chart_gauge_02_elem).setOptions(chart_gauge_settings);
+	    		
+	    	}
+	    	
+	    	
+	    	if ($('#gauge-text2').length){
+	    		
+	    		chart_gauge_02.maxValue = 9000;
+	    		chart_gauge_02.animationSpeed = 32;
+	    		chart_gauge_02.set(2400);
+	    		chart_gauge_02.setTextField(document.getElementById("gauge-text2"));
+	    	
+	    	}
+	    
+	    
+	    }
+      
+     document.addEventListener("DOMContentLoaded", function(event) { 
+        init_chart_doughnut2();
+        init_gauge2();
+       });
+    </script>
+
+
+        
+    <!-- gauge.js -->
+    <script src={% static 'stylesheets/gauge.js' %}></script>
+    
+    <!-- bootstrap-progressbar -->
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script-->
+
+    <!-- Custom Theme Scripts -->
+    <script src={% static 'stylesheets/custom.js' %}></script>
+		
+		<!-- Logos by Freepik from FlatIcon -->  
+
+  </body>
+</html>

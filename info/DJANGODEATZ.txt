@@ -1,0 +1,4 @@
+DJANGO SUPERUSER
+Userame: Mji0N83gebe3aP9fJu2gjZOP
+Password: ZPw65vfdv3aP9sGiThs8IOy6zsPSFvh3oMWgTs5xv863qKNlr2hYVbV2CAl
+

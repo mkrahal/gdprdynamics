@@ -1,0 +1,6 @@
+FAILED TO EXECUTE SQL QUERY 
+
+INSERT INTO tesddevstore_myshopify_com (event_id, date, action, method, referringpage, comment) VALUES ('Advqert6shtsrhv6351g', '2018-03-20 01:05:59.145196', 'Requested Data Removal', 'Data Removal Icon and Form Submit', 'HTTPREFFERER', 'Data removed from database. Partners notified of user request.');
+FAILED TO EXECUTE SQL QUERY 
+
+INSERT INTO tesddevstore_myshopify_com (event_id, date, action, method, referringpage, comment) VALUES ('Advqert6shtsrhv6351g', '2018-03-20 01:05:59.159923', 'Requested Data Removal', 'Data Removal Icon and Form Submit', 'HTTPREFFERER', 'Data removed from database. Partners notified of user request.');

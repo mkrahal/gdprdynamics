@@ -1,0 +1,42 @@
+<!-- Date Pickers -->
+<script>
+$( function() {
+  $( "#datepicker1" ).datepicker();
+} );
+</script>
+
+<script>
+$( function() {
+  $( "#datepicker2" ).datepicker();
+} );
+</script>
+
+<script type="text/javascript">
+  function setDatePickerFields() {
+    var selection = document.getElementById("log-type").value; 
+    if (selection == 'exporttimeperiod'){
+      document.getElementById("datepicker1").disabled = false;
+      document.getElementById("datepicker2").disabled = false;
+    }else{
+      document.getElementById("datepicker1").disabled = true;
+      document.getElementById("datepicker2").disabled = true;
+    }
+  }
+</script>
+
+<script type="text/javascript">
+    function higlightButton(exportType) { 
+    if (exportType == 'label-csv'){
+      document.getElementById("input-pdf").checked = false;
+      document.getElementById("input-csv").checked = true;
+      document.getElementById("label-csv").setAttribute("class", "btn btn-primary");
+      document.getElementById("label-pdf").setAttribute("class", "btn btn-default");
+    }else{
+      document.getElementById("input-pdf").checked = true;
+      document.getElementById("input-csv").checked = false;
+      document.getElementById("label-csv").setAttribute("class", "btn btn-default");
+      document.getElementById("label-pdf").setAttribute("class", "btn btn-primary");
+
+    }
+  }
+</script>

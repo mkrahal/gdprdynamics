@@ -1,0 +1,140 @@
+{% extends "dashboard/dashboard_cust_encaps.html" %}
+  {% block content %}
+  {% load static %}  
+
+      <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3><small></small></h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                </div>
+              </div>
+            </div>
+            
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Data Processing Activities</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <p></p>
+
+                    <!-- start project list -->
+                    <table class="table table-striped projects">
+                      <thead>
+                        <tr>
+                          <th>Event ID</th>
+                          <th style="width: 20%">Customer ID</th>
+                          <th>Status</th>
+                          <th>Event Type</th>
+                          <th>Processing Method</th>
+                          <th>Legal Basis</th>
+                          <th style="width: 20%">Actions</th>
+                        </tr>
+                      </thead>
+                      
+                      <tbody>
+
+                      {% for row in data_processing_activity_log %}
+                        <tr>
+                          <td>{{ row.0 }}</td>
+                          <td>
+                            <p style="word-break: break-all;">{{ row.6 }}</p>
+                            <small>{{ row.1 }}</small>
+                          </td>
+                          <td>
+                            {% if row.8 == 'Completed' %}
+                              <button type="button" class="btn btn-success btn-xs">Completed</button>
+                            {% elif row.8 == 'Pending' %}
+                              <button type="button" class="btn btn-danger btn-xs">Pending</button>
+                            {% else %}
+                              <span>-</span>
+                            {% endif %}
+                          </td>
+                          <td>
+                            <p>{{ row.2 }}</p>
+                          </td>
+                          <td>
+                            <p>{{ row.3 }}</p>
+                          </td>
+                          <td>
+                            {% if row.9 == 'Preparing or Performing a Contract (Product Sales)' %}
+                               <p>Contract</p>
+                            {% elif row.9 == 'Preparing or Performing a Contract (Product Sales) and Consent (Granted for Marketing)' %}
+                               <p>Contract and Consent</p>
+                            {% elif row.9 == 'Consent' %}
+                               <p>Consent</p>
+                            {% elif row.9 == 'Legal Compliance' %}
+                               <p>Legal Obligation</p>
+                            {% elif row.9 == 'Rights and Interests of Data Subject or Data Controller' %}
+                               <p>Legitimate Interest</p>
+                            {% elif row.9 == 'Public Interest' %}
+                               <p>Public Interest</p>
+                            {% elif row.9 == 'Vital Interest' %}
+                               <p>Vital Interest</p>
+                            {% else %}
+                               <p>-</p>
+                            {% endif %}
+                          </td>
+                          <td>
+                           <a href="/dpedit/?getdetails={{ row.0 }}&dkey={{ download_key }}" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                           <a href="/dpedit/?getdetails={{ row.0 }}&dkey={{ download_key }}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                           <a href="/dpactivities/?delevent={{ row.0 }}&dkey={{ download_key }}&page={{ page }}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                          </td>
+
+                        </tr>
+                      {% endfor %}
+
+                      </tbody>
+                    </table>
+                    <!-- end project list -->
+
+                  </div>
+                </div>
+              </div>
+               <div class="pagination col-md-12 text-right">
+                <span class="step-links">
+                    {% if data_processing_activity_log.has_previous %}
+                        <a href="?page={{ data_processing_activity_log.previous_page_number }}">previous</a>
+                    {% endif %}
+      
+                    <span class="current">
+                        Page {{ data_processing_activity_log.number }} of {{ data_processing_activity_log.paginator.num_pages }}.
+                    </span>
+      
+                    {% if data_processing_activity_log.has_next %}
+                        <a href="?page={{ data_processing_activity_log.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+              </div>
+            </div> 
+          </div> 
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            <a href="https://www.gdprdynamics.com">GDPR Compliance 360</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+
+{% endblock content %}

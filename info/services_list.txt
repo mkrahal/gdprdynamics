@@ -1,0 +1,20 @@
+apache2
+mysql
+rabbitmq
+supervisor
+
+
+---------------------------------
+
+sudo service supervisor status
+
+sudo supervisorctl restart shopify_scaffolding_beat
+sudo supervisorctl restart shopify_scaffolding
+
+sudo service apache2 start
+
+sudo service mysql status
+
+sudo systemctl start rabbitmq-server
+
+

@@ -1,0 +1,246 @@
+[
+  {
+    "model": "dashboard.FontMap",
+    "pk": 1,
+    "fields": {
+      "font_var_name": "lato", 
+      "font_linkrel_name": "Lato",
+      "font_css_string": "'Lato' !important"
+    }
+  },
+  {
+      "model": "dashboard.FontMap",
+      "pk": 2,
+      "fields": {
+      "font_var_name": "roboto", 
+      "font_linkrel_name": "Roboto",
+      "font_css_string": "'Roboto', sans-serif !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 3,
+      "fields": {
+      "font_var_name": "josefin", 
+      "font_linkrel_name": "Josefin+Sans",
+      "font_css_string": "'Josefin Sans' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 4,
+      "fields": {
+      "font_var_name": "lobster", 
+      "font_linkrel_name": "Lobster",
+      "font_css_string": "'Lobster' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 5,
+      "fields": {
+      "font_var_name": "open", 
+      "font_linkrel_name": "Open+Sans",
+      "font_css_string": "'Open Sans' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 6,
+      "fields": {
+      "font_var_name": "krona", 
+      "font_linkrel_name": "Krona+One",
+      "font_css_string": "'Krona One' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 7,
+      "fields": {
+      "font_var_name": "indie", 
+      "font_linkrel_name": "Indie+Flower",
+      "font_css_string": "'Indie+Flower' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 8,
+      "fields": {
+      "font_var_name": "bangers", 
+      "font_linkrel_name": "Bangers",
+      "font_css_string": "'Bangers' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 9,
+      "fields": {
+      "font_var_name": "varela", 
+      "font_linkrel_name": "Varela+Round",
+      "font_css_string": "'Varela Round' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 10,
+      "fields": {
+      "font_var_name": "bree", 
+      "font_linkrel_name": "Bree+Serif",
+      "font_css_string": "'Bree Serif', serif !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 11,
+      "fields": {
+      "font_var_name": "montserrat", 
+      "font_linkrel_name": "Montserrat",
+      "font_css_string": "'Montserrat', sans-serif !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 12,
+      "fields": {
+      "font_var_name": "nanum", 
+      "font_linkrel_name": "Nanum+Pen+Script",
+      "font_css_string": "'Nanum Pen Script', cursive !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 13,
+      "fields": {
+      "font_var_name": "muli", 
+      "font_linkrel_name": "Muli",
+      "font_css_string": "'Muli' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 14,
+      "fields": {
+      "font_var_name": "merriweather", 
+      "font_linkrel_name": "Merriweather+Sans",
+      "font_css_string": "'Merriweather Sans', sans-serif !important"
+    }
+  }, 
+  { 
+      "model": "dashboard.FontMap",
+      "pk": 15,
+      "fields": {
+      "font_var_name": "mystery", 
+      "font_linkrel_name": "Mystery+Quest",
+      "font_css_string": "'Mystery Quest' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 16,
+      "fields": {
+      "font_var_name": "serif", 
+      "font_linkrel_name": "Serif",
+      "font_css_string": "'Serif' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 17,
+      "fields": {
+      "font_var_name": "helvetica", 
+      "font_linkrel_name": "Helvetica",
+      "font_css_string": "'Helvetica' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 18,
+      "fields": {
+      "font_var_name": "verdana", 
+      "font_linkrel_name": "Verdana",
+      "font_css_string": "'Verdana' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 19,
+      "fields": {
+      "font_var_name": "shadows", 
+      "font_linkrel_name": "Shadows+Into+Light",
+      "font_css_string": "'Shadows Into Light' !important"
+    }
+  }, 
+  { 
+      "model": "dashboard.FontMap",
+      "pk": 20,
+      "fields": {
+      "font_var_name": "oswald", 
+      "font_linkrel_name": "Oswald",
+      "font_css_string": "'Oswald' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 21,
+      "fields": {
+      "font_var_name": "ubuntu", 
+      "font_linkrel_name": "Ubuntu",
+      "font_css_string": "'Ubuntu' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 22,
+      "fields": {
+      "font_var_name": "righteous", 
+      "font_linkrel_name": "Righteous",
+      "font_css_string": "'Righteous' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 23,
+      "fields": {
+      "font_var_name": "courier", 
+      "font_linkrel_name": "Courier",
+      "font_css_string": "'Courier' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 24,
+      "fields": {
+      "font_var_name": "raleway", 
+      "font_linkrel_name": "Raleway",
+      "font_css_string": "'Raleway' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 25,
+      "fields": {
+      "font_var_name": "carter", 
+      "font_linkrel_name": "Carter+One",
+      "font_css_string": "'Carter One' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 26,
+      "fields": {
+      "font_var_name": "pacifico", 
+      "font_linkrel_name": "Pacifico",
+      "font_css_string": "'Pacifico' !important"
+    }
+  }, 
+  {
+      "model": "dashboard.FontMap",
+      "pk": 27,
+      "fields": {
+      "font_var_name": "exo", 
+      "font_linkrel_name": "Exo+2",
+      "font_css_string": "'Exo 2', sans-serif !important"
+    }
+  } 
+]
+

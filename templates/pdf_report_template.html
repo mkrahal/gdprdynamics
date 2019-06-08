@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>GDPR Audit Log</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Fonts-->
+	<style type="text/css">
+	/*//////////////////////////////////////////////////////////////////[ FONT ]*/
+
+		/* Normal */
+		@font-face {
+			font-family: Roboto;
+			src: url(/home/zboqbtF6s5z0YNBJYNSj8YSzi61/shopifydev/shopifydev/static/fonts/Roboto-Regular.ttf);
+		}
+   
+		@font-face {
+      font-family: Roboto;
+      src: url(/home/zboqbtF6s5z0YNBJYNSj8YSzi61/shopifydev/shopifydev/static/fonts/Roboto-Bold.ttf);
+      font-weight: bold;
+    }	
+ 
+		@page {
+      size: letter landscape;
+      margin: 1cm;
+    }
+ 
+		.limiter {
+  		width: 1366px;
+  		margin: 0 auto;
+		}
+
+		.container-table100 {
+			font-family: 'Roboto';
+		  width: 100%;
+		  min-height: 100vh;
+		  background: #fff;
+
+		  display: -webkit-box;
+		  display: -webkit-flex;
+		  display: -moz-box;
+		  display: -ms-flexbox;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  flex-wrap: wrap;
+		}
+
+		.container-header100 {
+			font-family: 'Roboto';
+		  /*width: 100%;*/
+		  height: 100%;
+		  background: #fff;
+
+		  display: -webkit-box;
+		  display: -webkit-flex;
+		  display: -moz-box;
+		  display: -ms-flexbox;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  flex-wrap: wrap;
+		}
+
+		.wrap-table100 {
+		  width: 1170px;
+		}
+
+		/*//////////////////////////////////////////////////////////////////
+		[ Table ]*/
+		.table100 {
+		  background-color: #fff;
+		}
+
+		table {
+		  width: 100%;
+		}
+
+		th, td {
+		  font-weight: unset;
+		  padding-left: 2px;
+		  word-wrap: break-word;	
+		}
+
+		.column1 {
+		  /*width: 33%;*/
+		}
+
+		.column2 {
+		 /* width: 13%;*/
+		}
+
+		.column3 {
+		 /* width: 22%;*/
+		}
+
+		.column4 {
+		 /* width: 19%;*/
+		}
+
+		.column5 {
+		 /* width: 13%;*/
+		}
+
+		.table100-head th {
+		  padding-top: 8px;
+		  padding-bottom: 8px;
+		}
+
+		.table100-body td {
+		  padding-top: 6px;
+		  padding-bottom: 6px;
+		}
+
+		/*==================================================================
+		[ Fix header ]*/
+		.table100 {
+		  position: relative;
+		  padding-top: 20px;
+		}
+
+		.table100-head {
+		  position: absolute;
+		  width: 100%;
+		  top: 0;
+		  left: 0;
+			border-radius: 15px;
+		}
+
+		.table100-body {
+		  max-height: 585px;
+		}
+
+
+		/*==================================================================
+		[ Ver1 ]*/
+
+		.table100.ver1 th {
+		  font-family: 'Roboto';
+		  font-size: 15px;
+		  color: #fff;
+		  line-height: 1.4;
+		  font-weight: 700;
+
+		  background-color: #2A3F54;
+		}
+
+		.table100.ver1 td {
+		  font-family: 'Roboto';
+		  font-size: 14px;
+		  color: #808080;
+		  line-height: 1.4;
+		}
+
+		.table100.ver1 .table100-body tr:nth-child(even) {
+		  background-color: #f8f6ff;
+		}
+
+		/*---------------------------------------------*/
+
+		.table100.ver1 {
+		  border-radius: 10px;
+		  overflow: hidden;
+		  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+		  -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+		  -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+		  -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+		  -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+
+		}
+
+		.table100.ver1 .ps__rail-y {
+		  right: 5px;
+		}
+
+		.table100.ver1 .ps__rail-y::before {
+		  background-color: #ebebeb;
+		}
+
+		.table100.ver1 .ps__rail-y .ps__thumb-y::before {
+		  background-color: #cccccc;
+		}
+
+		.cell100{
+			border-color: #6c7ae0;
+		}
+
+		.noseperate{
+			border-collapse: collapse;
+		}
+
+		.headerdiv{
+			font-family: 'Roboto';
+			background-color: #6c7ae0;
+			border-radius: 10px;
+			margin-bottom: 10px;
+			color: #ffffff;
+			font-weight: 700px;
+			font-size:18px;
+		}
+		
+		.headercell1{
+			font-family: 'Roboto';
+			font-weight: 700;
+			font-size: 20px;
+			padding-top: -10px;
+		  margin-left: 10px;
+			color: #2A3F54;
+		}
+
+		.headercell2{
+			font-family: 'Roboto';
+			font-weight: 700;
+			font-size:15px;
+			padding-top: 5px;
+		  margin-left: 40px;
+			color: #2A3F54;
+		}
+
+		.headertable{
+			padding-left: 10px;
+			margin-bottom: 20px;
+		}
+
+		.columnimg {
+		  width: 20%;
+		}	
+
+	</style>
+</head>
+<body>
+	
+	
+<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">	
+						
+					<table class="headertable">
+						<tr>
+							<td width="128px"><img src="/home/zboqbtF6s5z0YNBJYNSj8YSzi61/shopifydev/shopifydev/static/images/pdf_template_logo.png"></td>	
+							<td class="headercell1" align="left">
+                <p>
+								<strong>GDPR AUDIT LOG</strong><br/>
+                {{ shop_name }}</p>
+              </td>
+							<td class="headercell2" align="left">
+                <p>
+									<strong>Data Processor Category:</strong> Data Controller<br/>
+									<strong>Legal Basis of Processing:</strong> Contract and Consent<br/>
+									<strong>Data Processing Purpose:</strong> Sales processing and product marketing<br/>
+                                    
+                </p>
+              </td>
+						</tr>
+					</table>
+			 				
+	
+			<div class="table100 ver1 m-b-110">
+					<div class="table100-head">
+						<table class="noseperate">
+							<thead>
+								<tr class="row100 head"> 
+									<th class="cell100 column1" align="left">Data Subject ID</th>
+									<th class="cell100 column2">Event Timestamp</th>
+									<th class="cell100 column3">Event Type</th>
+									<th class="cell100 column4">Processing Method</th>
+									<th class="cell100 column5">Description</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+
+					<div class="table100-body">
+						<table>
+							<tbody>
+
+								{% for event in dataevent_list %}
+								<tr class="row100 body">
+									<td class="cell100 column1"><p>{{ event.6 }}</p></td>
+									<td class="cell100 column2" align="center">{{ event.1 }}</td>
+									<td class="cell100 column3" align="center">{{ event.2 }}</td>
+									<td class="cell100 column4" align="center">{{ event.3 }}</td>
+									<td class="cell100 column5" align="center">{{ event.5 }}</td>
+								</tr>
+								{% endfor %}
+
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				
+
+</body>
+</html>

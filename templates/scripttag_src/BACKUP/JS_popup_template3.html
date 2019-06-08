@@ -1,0 +1,785 @@
+
+  //Fonts/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  var linkfa = document.createElement('link');
+  linkfa.setAttribute('rel', 'stylesheet');
+	linkfa.setAttribute('type', 'text/css');
+	linkfa.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+	document.head.appendChild(linkfa);
+
+  var linkfont = document.createElement('link');
+  linkfont.setAttribute('rel', 'stylesheet');
+  linkfont.setAttribute('type', 'text/css');
+  linkfont.setAttribute('href', 'https://fonts.googleapis.com/css?family={{ font_link_name }}');
+  document.head.appendChild(linkfont);
+
+  // CSS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Create a New StyleSheet 
+  var sheet = (function() {
+    // Create the <style> tag
+    var style = document.createElement("style");
+
+    // WebKit magic
+    style.appendChild(document.createTextNode(""));
+
+    // Add the <style> element to the page
+    document.head.appendChild(style);
+
+    return style.sheet;
+  })();
+
+  // Insert Custom CSS Rules
+
+	 /**********************************************************************************************************/
+	/*Mobile CSS*/
+	/**********************************************************************************************************/
+
+	sheet.insertRule("@media only screen and (max-device-width: 580px){ .GDPRruzcv2wa66tdformatingleft{border: 0px solid transparent; text-align: left; padding: 0px 0px !important;} .GDPRruzcv2wa66tdformatingright{border: 0px solid transparent; text-align: right;} .GDPRruzcv2wa66gdprremovebtn { background-color: transparent; height: 30px; width: 30px; margin-left: 5px; margin-bottom: 5px; left: 0; bottom: 0; border-radius: 50%; border: 0px; position: fixed; z-index: 2147483647; cursor:pointer;} .GDPRruzcv2wa66gdprremovebuttonlogo{ font-size: 14px !important; color: {{ text_color }} !important;} .GDPRruzcv2wa66consenttext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 14px; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: block;} .GDPRruzcv2wa66declinetext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 14px; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: none;} .GDPRruzcv2wa66checkemailtext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 14px; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: none;} .GDPRruzcv2wa66wrongreqtext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 14px; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: none;} .GDPRruzcv2wa66consenttitle{ font-size: 17px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-weight: 800; color: {{ text_color }}; margin-top: 15px;} .GDPRruzcv2wa66consentpartners{ color: {{ text_color }}; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 12px;} .GDPRruzcv2wa66datareqtable{ margin-bottom: 0px !important; margin-top: 0px !important; padding: 0px !important;} .GDPRruzcv2wa66consentpurpose{ color: {{ text_color }}; font-size: 15px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; padding-bottom: 5px; padding-top: 5px;} .GDPRruzcv2wa66partnersscrolltabletopline{ width: 100%; font-size: 12px; color: transparent; border-bottom: 1px solid {{ text_color }}; background-color: {{ text_color }};} .GDPRruzcv2wa66modal-content { margin: auto; clear: none; position: relative; border-style: solid; border-width: 10px; border-radius: 120px; border-color: transparent; width: 92%; /*MOBILE*/ max-width: 100vh; /*MOBILE*/ max-height: 100vh;/*MOBILE*/ position: absolute; /*MOBILE*/ padding: 20px; /*border: 1px solid #888;*/ z-index: 2147483647; padding: 0px 20px 15px;} .GDPRruzcv2wa66acceptbtn{ float: none !important; font-size: 0.7em !important; margin-left: 10px; background-color: {{ accept_color }};} .GDPRruzcv2wa66declinebtn{ float: none !important; font-size: 0.7em !important; margin-right: 10px; background-color: {{ decline_color }};} .GDPRruzcv2wa66button2x { font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; text-align: center !important; display:inline-block; position: relative !important; color: {{ text_color }} !important; /*Color of button Text*/ border: 1px solid {{ text_color }} !important; /*Color of button Border*/ padding: 1.25em 2em !important; font-size: 0.5em !important; /*Button Font size*/ letter-spacing: 1px !important; text-transform: uppercase !important; cursor: pointer !important; border-radius:3px; -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important; -webkit-transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1) !important; transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1) !important;text-decoration: none;} .GDPRruzcv2wa66partnersscrollbar{ display: none; /*switch to none to hide*/ width: 90%; height: 100px;  overflow-y: scroll; position: relative; margin: 10px auto; border: 2px solid {{ text_color }} !important; border-radius: 7px;} /*DATA REQUEST CSS*/ .GDPRruzcv2wa66datareq-modal { text-align: center !important; display: none; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 2147483640; left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: rgba(0,0,0,0.85); ; /* Black w/ opacity */ transition: .2s ease-out background-color;} .GDPRruzcv2wa66modal-content-datareq { border-style: solid; border-width: 10px; border-radius: 120px; border-color: transparent padding: 2rem; width: 92%; /* Could be more or less, depending on screen size */ max-width: 100vh; max-height: 100vh; position: absolute; z-index: 2147483647; padding: 0px 20px 15px; box-shadow: 1px 1px 6px rgba(0,0,0,0.3); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%)} .GDPRruzcv2wa66consenttitle-datareq{ color: {{ text_color }}; font-size:17px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-style:italic;  padding-top: 15px;} .GDPRruzcv2wa66titleline{ margin: 2px 0; border: 0; border-bottom: 1px solid {{ accept_color }};} .GDPRruzcv2wa66consentsubtitle{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 16px; font-weight: 700; color: {{ accept_color }}; padding-left: 7px; padding-bottom: 15px !important; border: 0px solid transparent; text-align: left;} .GDPRruzcv2wa66submitinput{ margin-top: 15px; padding: 10px 10px; border: 1px solid {{ accept_color }}; border-radius: 10px; line-height: 1.7rem; text-transform: initial; letter-spacing: initial; -webkit-box-sizing: border-box; box-sizing: border-box; display: block; width: 100%;} .GDPRruzcv2wa66submittext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 14px; font-weight: 800; line-height: 1.7rem; text-transform: initial; letter-spacing: initial; box-sizing: border-box; width: 90%; max-width: 100%; border: 0px; text-align: center; padding: 0px !important;} /* Modified Radio Buttons*/.GDPRruzcv2wa66containerradio { display: block; position: relative; padding-left: 10px; margin-bottom: 12px; cursor: pointer; font-size: 14px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .GDPRruzcv2wa66containerradio input { position: absolute; opacity: 0;} /* Create a custom radio button */ .GDPRruzcv2wa66checkmarkradio { background-color: transparent position: absolute; top: 0; left: 0; height: 15px; width: 15px; border: 2px solid {{ accept_color }}; border-radius: 50%;} /* On mouse-over, add a grey background color */.GDPRruzcv2wa66containerradio:hover input ~ .GDPRruzcv2wa66checkmarkradio {} /* When the radio button is checked, add a blue background */ .GDPRruzcv2wa66containerradio input:checked ~ .GDPRruzcv2wa66checkmarkradio { background-color: {{ accept_color }};} /* Create the indicator (the dot/circle - hidden when not checked) */ .GDPRruzcv2wa66checkmarkradio:after { content: ''; position: absolute; display: none;} /* Show the indicator (dot/circle) when checked */ .GDPRruzcv2wa66containerradio input:checked ~ .GDPRruzcv2wa66checkmarkradio:after { display: block;} /* Style the indicator (dot/circle) */ .GDPRruzcv2wa66containerradio .GDPRruzcv2wa66checkmarkradio:after {} .GDPRruzcv2wa66submitbtn{ float: none !important; font-size: 0.7em !important; margin-top: 5px; width: 50%; display: block;} .GDPRruzcv2wa66radiolabel{ margin-left: 15px; font-size: 14px; font-weight: 600;} input[type='email'] { background: transparent; color: {{ text_color }};} input[type='email']::placeholder { color: {{ text_color }};} /*Hide Placeholder text when user clicks on the <input> box (easier to see in mobile) */ .GDPRruzcv2wa66submittext:focus::-webkit-input-placeholder {color:transparent;} .GDPRruzcv2wa66submittext:focus::-moz-placeholder {color:transparent;} .GDPRruzcv2wa66submittext:-moz-placeholder {color:transparent;}}", 0);
+	
+	/**********************************************************************************************************/
+	/* Small screen css*/
+	/*********************************************************************************************************/    
+	sheet.insertRule("@media only screen and (min-width: 900px){ .GDPRruzcv2wa66acceptbtn{ font-size: 15px; background-color: {{ accept_color }}; /*Button Background Color #a3cf0e*/ float: right !important; width: 40%;} .GDPRruzcv2wa66declinebtn{ font-size: 15px; background-color: {{ decline_color }}; /*Button Background Color* #990000*/ float: left !important; width: 40%;} .GDPRruzcv2wa66modal-content { max-width: 700px;}}", 0);
+
+	sheet.insertRule("@media only screen and (max-width: 900px){.GDPRruzcv2wa66acceptbtn{ margin-top: 5px; margin-left: 10px; float: none !important; font-size: 0.75em !important; /*Button Font size*/ background-color: {{ accept_color }}; /*Button Background Color #a3cf0e*/} .GDPRruzcv2wa66declinebtn{ margin-bottom: 5px; margin-right: 10px; float: none !important; font-size: 0.75em !important; /*Button Font size*/ background-color: {{ decline_color }}; /*Button Background Color* #990000*/} .GDPRruzcv2wa66modal-content{ max-width: 370px;} .GDPRruzcv2wa66consenttext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}, sans-serif; font-size: 15px; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: block;} .GDPRruzcv2wa66declinetext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 14px; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: none;} .GDPRruzcv2wa66checkemailtext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 14px; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: none;} .GDPRruzcv2wa66wrongreqtext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 14px; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: none;}.GDPRruzcv2wa66consenttitle{ color: {{ text_color }}; font-size: 20px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-style:italic;} .GDPRruzcv2wa66consentsubtitle{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 16px; font-weight: 600; color: {{ text_color }}; padding-left: 5px; padding-bottom: 10px;} .GDPRruzcv2wa66consenttitle-datareq{ color: {{ text_color }}; font-size:20px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-style:italic; padding-top: 15px;} .GDPRruzcv2wa66radiolabel{ margin-left: 3px; color: {{ text_color }}; font-size: 15px;} .GDPRruzcv2wa66submitbtn{ background: {{ accept_color }}; width: 50%; font-size: 0.75em !important; display: block;} .GDPRruzcv2wa66submittext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 15px; font-weight: 500; line-height: 2.4rem; text-transform: initial; letter-spacing: initial; box-sizing: border-box; width: 90%; max-width: 100%; border: 0px; text-align: center;}}", 0);
+
+	/**********************************************************************************************************/
+	/* Regular screen css*/
+	/*********************************************************************************************************/
+
+	sheet.insertRule(".GDPRruzcv2wa66tdformatingleft{border: 0px solid transparent; text-align: left; padding: 0px 0px !important;}", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66tdformatingright{border: 0px solid transparent; text-align: right;}", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66datareqtable{ margin-bottom: 0px !important; margin-top: 0px !important; padding: 0px !important;}", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66consentpurpose{ color: {{ text_color }}; font-size: 15px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; padding-bottom: 5px; padding-top: 5px;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66button1x { font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; !important; text-align: center !important; display:inline-block; position: relative !important; color: {{ text_color }} !important; /*Color of button Text*/ border: none !important; padding-top: 1.25em !important; padding-bottom: 1.25em !important; font-size: 0.95em !important; /*Button Font size*/ font-weight:600 !important; letter-spacing: 1px !important; text-transform: uppercase !important; cursor: pointer !important; border-radius: 10px; -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important; -webkit-transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1) !important; transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1) !important;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66button2x { font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; text-align: center !important; display:inline-block; position: relative !important; color: {{ text_color }} !important; /*Color of button Text*/ border: 1px solid {{ text_color }} !important; /*Color of button Border*/ padding: 1.25em 2em !important; font-size: 0.60em !important; /*Button Font size*/ letter-spacing: 1px !important; text-transform: uppercase !important; cursor: pointer !important; border-radius:3px; -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important; -webkit-transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1) !important; transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1) !important; text-decoration: none;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66button1x:hover {}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66button1x:focus {outline: none !important;}", 0);
+
+	/* The Modal (background) */
+	sheet.insertRule(".GDPRruzcv2wa66modal { text-align: center !important; display: none; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 2147483640; left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: rgba(0,0,0,0.85); ; /* Black w/ opacity */ transition: .2s ease-out background-color;  }", 0);
+
+	/* Modal Content/Box */
+	sheet.insertRule(".GDPRruzcv2wa66modal-content { margin: auto; clear: none; position: relative; border-style: solid; border-width: 10px; border-radius: 120px; border-color: transparent; padding: 20px; width: 50%; /* Could be more or less, depending on screen size */ position: absolute; z-index: 2147483647; top: 50%; left: 50%; width: 50%; padding: 0px 20px 15px; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}", 0);
+
+	/* The Close Button */
+	sheet.insertRule(".GDPRruzcv2wa66close { color: {{ text_color }}; float: right; font-size: 28px; font-weight: bold;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66close:hover, .GDPRruzcv2wa66close:focus { color: black; text-decoration: none; cursor: pointer;}", 0);
+
+	/*Link to Request*/
+	sheet.insertRule(".GDPRruzcv2wa66gdprremovebtn { background-color: transparent; height: 30px; width: 30px; margin-left: 5px; margin-bottom: 5px; left: 0; bottom: 0; border-radius: 50%; border: 0px; position: fixed; z-index: 2147483647; cursor:pointer;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66gdprremovebuttonlogo{ font-size: 24px !important; color: {{ text_color }} !important;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66partnersscrollbar{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; display: none; /*switch to none to hide*/ width: 90%; height: 100px; overflow-y: scroll; position: relative; margin: 10px auto; border: 2px solid transparent !important; border-radius: 7px;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66partnersscrolltable{ width: 100%;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66partnersscrolltabletopline{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; width: 100%; font-size: 13px; color: transparent; border-bottom: 1px solid {{ text_color }}; background-color: {{ text_color }};}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66consentwrapper{ margin-top: 15px; margin-left: 10%; margin-right: 10%;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66consenttext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 20px; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: block;}", 0);
+	
+	sheet.insertRule(".GDPRruzcv2wa66declinetext{ font-size: 15px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: none;}", 0);
+
+
+	sheet.insertRule(".GDPRruzcv2wa66consenttitle{ color: {{ text_color }}; font-size:35px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-style:italic; padding-top: 15px;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66consentpartners{ color: {{ text_color }}; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 13px;}", 0);
+
+	/*DATA REQUEST CSS*/
+
+	sheet.insertRule(".GDPRruzcv2wa66datareq-modal { text-align: center !important; display: none; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 2147483640; left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: rgba(0,0,0,0.85); ; /* Black w/ opacity */ transition: .2s ease-out background-color;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66consenttitle-datareq{ color: {{ text_color }}; font-size:30px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-style:italic;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq { margin: auto; clear: none; position: relative; border-style: solid; border-width: 10px; border-radius: 120px; border-color: transparent; padding: 20px; max-width: 440px; width: 50%; /* Could be more or less, depending on screen size */ position: absolute; z-index: 2147483647; top: 50%; left: 50%; width: 50%; padding: 0px 20px 15px; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66titleline{ margin: 2px 0; border: 0; border-bottom: 1px solid {{ accept_color }};}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66consentsubtitle{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 18px; font-weight: 600; color: {{ accept_color }}; padding-bottom: 10px !important; border: 0px; text-align: left;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66submitinput{ margin-top: 15px; padding: 0px 10px; border: 1px solid {{ accept_color }}; border-radius: 10px; line-height: 2.4rem; text-transform: initial; letter-spacing: initial; -webkit-box-sizing: border-box; box-sizing: border-box; display: block; width: 100%;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66submittext{ font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 15px; font-weight: 700; line-height: 2.4rem; text-transform: initial; letter-spacing: initial; box-sizing: border-box; width: 90%; max-width: 100%; border: 0px; text-align: center; padding: 0px !important;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66checkemailtext{ font-size: 15px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: none;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66wrongreqtext { font-size: 15px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; width: 100%; position: relative; margin: 0 auto; color: {{ text_color }}; display: none;}", 0);
+
+	/* Modified Radio Buttons*/
+	sheet.insertRule(".GDPRruzcv2wa66containerradio { display: block; position: relative; padding-left: 20px; margin-bottom: 5px; cursor: pointer; font-size: 15px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66containerradio input { position: absolute; opacity: 0;}", 0);
+
+	/* Create a custom radio button */
+	sheet.insertRule(".GDPRruzcv2wa66checkmarkradio { position: absolute; top: 0; left: 0;height: 15px; width: 15px; background-color: transparent; border: 2px solid {{ accept_color }}; border-radius: 50%;}", 0);
+
+	/* On mouse-over, add a grey background color */
+	sheet.insertRule(".GDPRruzcv2wa66containerradio:hover input ~ .GDPRruzcv2wa66checkmarkradio {}", 0);
+
+	/* When the radio button is checked, add a blue background */
+	sheet.insertRule(".GDPRruzcv2wa66containerradio input:checked ~ .GDPRruzcv2wa66checkmarkradio { background-color: {{ accept_color }};}", 0);
+
+	/* Create the indicator (the dot/circle - hidden when not checked) */
+	sheet.insertRule(".GDPRruzcv2wa66checkmarkradio:after { content: ''; position: absolute; display: none;}", 0);
+
+	/* Show the indicator (dot/circle) when checked */
+	sheet.insertRule(".GDPRruzcv2wa66containerradio input:checked ~ .GDPRruzcv2wa66checkmarkradio:after { display: block;}", 0);
+
+	/* Style the indicator (dot/circle) */
+	sheet.insertRule(".GDPRruzcv2wa66containerradio .GDPRruzcv2wa66checkmarkradio:after {}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66radiolabel{ margin-left: 3px; color: {{ text_color }}; font-weight: 500;}", 0);
+
+	sheet.insertRule(".GDPRruzcv2wa66submitbtn{ background: {{ accept_color }}; width: 50%; display: block;}", 0);
+
+	sheet.insertRule("input[type='email'] { background: transparent; color: {{ accept_color }};}", 0);
+
+	sheet.insertRule("input[type='email']::placeholder { color: {{ text_color }};}", 0);
+
+	/* END OF DATAREQUEST CSS*/
+  
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  function browserspecificCSS() { 
+     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
+      {
+        //
+      }
+    else if(navigator.userAgent.indexOf("Chrome") != -1 )
+      {
+        sheet.insertRule(".GDPRruzcv2wa66submittext:focus::-webkit-input-placeholder {color:transparent;}", 0);
+      }
+    else if(navigator.userAgent.indexOf("Safari") != -1)
+      {
+        sheet.insertRule(".GDPRruzcv2wa66submittext:focus::-webkit-input-placeholder {color:transparent;}", 0);
+      }
+    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+      {
+        sheet.insertRule(".GDPRruzcv2wa66submittext:focus::-moz-placeholder {color:transparent;}", 0);
+        sheet.insertRule(".GDPRruzcv2wa66submittext:-moz-placeholder {color:transparent;}", 0);
+      }
+    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+      {
+        sheet.insertRule(".GDPRruzcv2wa66submittext:focus:-ms-input-placeholder { color:transparent; }", 0);
+      }  
+    else 
+      {
+       
+      }
+  }
+
+  // One way only does not wait for a response
+  function postxhml(data, url){
+  	var xhr = new XMLHttpRequest();
+  	xhr.open("POST", url, true);
+  	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+  	xhr.send(data);
+  }
+
+  function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  //Async XMLrequest with timeout promise resolve
+  function gettext(url) {
+      return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+          resolve('No Text'); // What to return if not resolved After 3 seconds,(display ENG Consent Form)
+        }, 600000); //miliseconds (currently 1min, meaning that my code will execute max 1min after pageload)
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+          resolve(this.responseText);
+        };
+        xhr.onerror = reject;
+        xhr.open('GET', url);
+        xhr.send();
+      });
+    }
+
+  function createmodals(store_name, consent_line1, consent_line2, consent_line3a, consent_line3b, consent_line3c, consent_line3d, consent_line3e, consent_line4a, consent_line4b, consent_line5, consent_line6, consent_line7, datareq_line1, datareq_line2, datareq_line3, datareq_line4, datareq_line5, datareq_line6, partners_line1, partners_line2, partners_line3, text_button_decline, text_button_wrongrequest, text_button_submit) {
+    // Create CONSENT-PUPUP Modal elements ////////////////////////////////////////////////////////////////////////////////////////
+    var myModaldiv = document.createElement("div");
+    myModaldiv.setAttribute("id", "GDPRruzcv2wa66consent-request-modal");
+    myModaldiv.setAttribute("class", "GDPRruzcv2wa66modal");
+    
+    var modalContent = document.createElement("div");
+    modalContent.setAttribute("class", "GDPRruzcv2wa66modal-content");
+    
+    var innerTitle = document.createElement("p");
+    innerTitle.setAttribute("class", "GDPRruzcv2wa66consenttitle");
+    var innerTitleStrong = document.createElement("strong");
+    var t = document.createTextNode(consent_line1);
+    innerTitleStrong.appendChild(t);
+
+		var modalDeclinediv = document.createElement("div");
+		modalDeclinediv.setAttribute("class", "GDPRruzcv2wa66declinetext");
+		modalDeclinediv.setAttribute("id", "GDPRruzcv2wa66-decline-id");
+		var innerDeclineText = document.createElement("p");
+		var innerStrongText = document.createElement("strong");
+    innerStrongText.innerHTML = text_button_decline;
+    innerDeclineText.appendChild(innerStrongText);
+
+    var modalTextdiv = document.createElement("div");
+    modalTextdiv.setAttribute("class", "GDPRruzcv2wa66consenttext");
+    modalTextdiv.setAttribute("id", "GDPRruzcv2wa66-consenttext-id");
+
+    var innerTextLine1 = document.createElement("p");
+    innerTextLine1.setAttribute("class", "GDPRruzcv2wa66consenttext");
+    innerTextLine1.innerHTML = consent_line2 + ' ' + store_name;
+
+    var innerTextLine2 = document.createElement("p");
+    innerTextLine2.setAttribute("class", "GDPRruzcv2wa66consenttext");
+    innerTextLine2.innerHTML = consent_line3a + ' ' + consent_line3b + ' ' + consent_line3c + ' ' + '<a id="GDPRruzcv2wa66-displaypartners" href="#GDPRruzcv2wa66-viewpartners">' + consent_line3d + '</a>' + ' ' + consent_line3e;
+
+    var innerTextLine3 = document.createElement("p");
+    innerTextLine3.setAttribute("class", "GDPRruzcv2wa66consenttext");
+    innerTextLine3.innerHTML =consent_line4a + '<a id="GDPRruzcv2wa66-learnmore" href="#GDPRruzcv2wa66-learnmoresection">' + consent_line4b + '</a>';
+    
+    var myPartnersdiv = document.createElement("div");
+    myPartnersdiv.setAttribute("id", "GDPRruzcv2wa66-partnersscrolllist");
+    myPartnersdiv.setAttribute("class", "GDPRruzcv2wa66partnersscrollbar");
+
+    var PartnersTable = document.createElement("table");
+    PartnersTable.setAttribute("class", "GDPRruzcv2wa66partnersscrolltable");
+
+		// Data COLLECTION SECTION //////////////////////////////////////////////////////////////////////////////
+
+    // View Data Collection Purpose row in details scroll bar
+    var myTableRow = document.createElement("tr");
+    var myTableCell1 = document.createElement("td");
+    myTableCell1.setAttribute("colspan", "2");
+    myTableCell1.setAttribute("align", "left");
+    myTableCell1.setAttribute("class", "GDPRruzcv2wa66partnersscrolltabletopline");
+    myTableCell1.setAttribute("id", "GDPRruzcv2wa66-learnmoresection");
+    myTableCell1.innerHTML = partners_line1;
+    myTableRow.appendChild(myTableCell1);
+    PartnersTable.appendChild(myTableRow);
+
+    {% for datapurpose in data_purpose_list %}
+    // Content Row for data collection purpose scroll bar this is what wrapped in loop when rendering with DJANGO
+    // Each Checked Purpose will invoke a loop of the following code to create a new row
+    var myTableRow = document.createElement("tr");
+    var myTableCell1 = document.createElement("td");
+    myTableCell1.setAttribute("colspan", "2");
+    myTableCell1.setAttribute("align", "left");
+    myTableCell1.setAttribute("class", "GDPRruzcv2wa66tdformatingleft");
+    var myTableCell1content = document.createElement("div");
+    myTableCell1content.setAttribute("class", "GDPRruzcv2wa66consentpurpose");
+    myTableCell1content.innerHTML = "{{ datapurpose }}"; 
+    myTableCell1.appendChild(myTableCell1content);
+    myTableRow.appendChild(myTableCell1);
+    PartnersTable.appendChild(myTableRow);
+    {% endfor %}
+
+    // Data Transfer SECTION //////////////////////////////////////////////////////////////////////////////
+
+    // View Data Transfer row in details scroll bar
+    var myTableRow = document.createElement("tr");
+    var myTableCell1 = document.createElement("td");
+    myTableCell1.setAttribute("colspan", "2");
+    myTableCell1.setAttribute("align", "left");
+    myTableCell1.setAttribute("class", "GDPRruzcv2wa66partnersscrolltabletopline");
+    myTableCell1.setAttribute("id", "GDPRruzcv2wa66-learnmore");
+    myTableCell1.innerHTML = partners_line2;
+    myTableRow.appendChild(myTableCell1);
+    PartnersTable.appendChild(myTableRow);
+
+    // Content Row for data collection purpose scroll bar this is what wrapped in loop when rendering with DJANGO
+    // Each Checked Purpose will invoke a loop of the following code to create a new row
+    var myTableRow = document.createElement("tr");
+    var myTableCell1 = document.createElement("td");
+    myTableCell1.setAttribute("align", "left");
+    myTableCell1.setAttribute("class", "GDPRruzcv2wa66tdformatingleft");
+    var myTableCell1content = document.createElement("div");
+    myTableCell1content.setAttribute("class", "GDPRruzcv2wa66consentpartners");
+    myTableCell1content.innerHTML = "Country"; 
+    var myTableCell2 = document.createElement("td");
+    myTableCell2.setAttribute("align", "right");
+    myTableCell2.setAttribute("class", "GDPRruzcv2wa66tdformatingright");
+    var myTableCell2content = document.createElement("div");
+    myTableCell2content.setAttribute("class", "GDPRruzcv2wa66consentpartners");
+    myTableCell2content.innerHTML = "{{ third_country }}";
+    myTableCell1.appendChild(myTableCell1content);
+    myTableCell2.appendChild(myTableCell2content); 
+    myTableRow.appendChild(myTableCell1);
+    myTableRow.appendChild(myTableCell2);
+    PartnersTable.appendChild(myTableRow);
+
+
+    //PARTNERS SECTION ////////////////////////////////////////////////////////////////////////////////////////
+
+    // View Partners row in partners scroll bar
+    var myTableRow = document.createElement("tr");
+    var myTableCell1 = document.createElement("td");
+    myTableCell1.setAttribute("colspan", "2");
+    myTableCell1.setAttribute("align", "left");
+    myTableCell1.setAttribute("class", "GDPRruzcv2wa66partnersscrolltabletopline");
+    myTableCell1.setAttribute("id", "GDPRruzcv2wa66-viewpartners");
+    myTableCell1.innerHTML = partners_line3;
+    myTableRow.appendChild(myTableCell1);
+    PartnersTable.appendChild(myTableRow);
+
+    //known partners
+    {% for partnername, partnerlink in  partners_dict.items %}
+    // Content Row for partners scroll bar this is what wrapped in loop when rendering with DJANGO
+    // Each Partner will invoke a loop of the following code to create a new row
+    var myTableRow = document.createElement("tr");
+    var myTableCell1 = document.createElement("td");
+    myTableCell1.setAttribute("align", "left");
+    myTableCell1.setAttribute("class", "GDPRruzcv2wa66tdformatingleft");
+    var myTableCell1content = document.createElement("div");
+    myTableCell1content.setAttribute("class", "GDPRruzcv2wa66consentpartners");
+    myTableCell1content.innerHTML = "{{ partnername }}"; // Change Name of Partners 
+    var myTableCell2 = document.createElement("td");
+    myTableCell2.setAttribute("align", "right");
+    myTableCell2.setAttribute("class", "GDPRruzcv2wa66tdformatingright");
+    var myTableCell2content = document.createElement("div");
+    myTableCell2content.innerHTML = '<a href="{{ partnerlink }}" class="GDPRruzcv2wa66button2x" target="_blank">View Details</a>'; // Change link to partner here
+    myTableCell1.appendChild(myTableCell1content);
+    myTableCell2.appendChild(myTableCell2content); 
+    myTableRow.appendChild(myTableCell1);
+    myTableRow.appendChild(myTableCell2);
+    PartnersTable.appendChild(myTableRow);
+    {% endfor %}
+
+    //Unknown partners (Shipping)
+    {% for partnername in  unknownpartners_list %}
+    // Content Row for partners scroll bar this is what wrapped in loop when rendering with DJANGO
+    // Each Partner will invoke a loop of the following code to create a new row
+    var myTableRow = document.createElement("tr");
+    var myTableCell1 = document.createElement("td");
+    myTableCell1.setAttribute("align", "left");
+    myTableCell1.setAttribute("class", "GDPRruzcv2wa66tdformatingleft");
+    var myTableCell1content = document.createElement("div");
+    myTableCell1content.setAttribute("class", "GDPRruzcv2wa66consentpartners");
+    myTableCell1content.innerHTML = "{{ partnername }}"; // Change Name of Partners 
+    //var myTableCell2 = document.createElement("td");
+    //myTableCell2.setAttribute("align", "right");
+    //myTableCell2.setAttribute("class", "GDPRruzcv2wa66tdformatingright");
+    //var myTableCell2content = document.createElement("div");
+    //myTableCell2content.innerHTML = '<a href="{{ partnerlink }}" class="GDPRruzcv2wa66button2x" target="_blank">View Details</a>'; // Change link to partner here
+    myTableCell1.appendChild(myTableCell1content);
+    //myTableCell2.appendChild(myTableCell2content); 
+    myTableRow.appendChild(myTableCell1);
+    //myTableRow.appendChild(myTableCell2);
+    PartnersTable.appendChild(myTableRow);
+    {% endfor %}
+
+    //Custom Unknown partners (Marketing)
+    {% for partnername in  unknownmarketing_list %}
+    // Content Row for partners scroll bar this is what wrapped in loop when rendering with DJANGO
+    // Each Partner will invoke a loop of the following code to create a new row
+    var myTableRow = document.createElement("tr");
+    var myTableCell1 = document.createElement("td");
+    myTableCell1.setAttribute("align", "left");
+    myTableCell1.setAttribute("class", "GDPRruzcv2wa66tdformatingleft");
+    var myTableCell1content = document.createElement("div");
+    myTableCell1content.setAttribute("class", "GDPRruzcv2wa66consentpartners");
+    myTableCell1content.innerHTML = "{{ partnername }}"; // Change Name of Partners 
+    //var myTableCell2 = document.createElement("td");
+    //myTableCell2.setAttribute("align", "right");
+    //myTableCell2.setAttribute("class", "GDPRruzcv2wa66tdformatingright");
+    //var myTableCell2content = document.createElement("div");
+    //myTableCell2content.innerHTML = '<a href="{{ partnerlink }}" class="GDPRruzcv2wa66button2x" target="_blank">View Details</a>'; // Change link to partner here
+    myTableCell1.appendChild(myTableCell1content);
+    //myTableCell2.appendChild(myTableCell2content); 
+    myTableRow.appendChild(myTableCell1);
+    //myTableRow.appendChild(myTableCell2);
+    PartnersTable.appendChild(myTableRow);
+    {% endfor %}
+    
+    var modalButtonsdiv = document.createElement("div");
+    modalButtonsdiv.setAttribute("class", "GDPRruzcv2wa66consentwrapper");    
+
+    var acceptedbtn = document.createElement("BUTTON");        // Create a <button> element
+    acceptedbtn.setAttribute("id", "GDPRruzcv2wa66-accept-btn");
+    acceptedbtn.setAttribute("class", "GDPRruzcv2wa66button1x GDPRruzcv2wa66acceptbtn");
+    var z = document.createTextNode(consent_line6);       // Create a text node
+    acceptedbtn.appendChild(z);
+  
+    var declinedbtn = document.createElement("BUTTON");        // Create a <button> element
+    declinedbtn.setAttribute("id", "GDPRruzcv2wa66-decline-btn");
+    declinedbtn.setAttribute("class", "GDPRruzcv2wa66button1x GDPRruzcv2wa66declinebtn");
+    var x = document.createTextNode(consent_line7);   // Create a text node
+    declinedbtn.appendChild(x);
+    
+
+    modalTextdiv.appendChild(innerTextLine1);
+    modalTextdiv.appendChild(innerTextLine2);
+    modalTextdiv.appendChild(innerTextLine3);
+    innerTitle.appendChild(innerTitleStrong);
+    modalContent.appendChild(innerTitle);
+    modalContent.appendChild(modalTextdiv);
+    modalDeclinediv.appendChild(innerDeclineText);
+		modalContent.appendChild(modalDeclinediv);
+    myPartnersdiv.appendChild(PartnersTable);
+    modalContent.appendChild(myPartnersdiv);
+    modalButtonsdiv.appendChild(declinedbtn);
+    modalButtonsdiv.appendChild(acceptedbtn);
+    modalContent.appendChild(modalButtonsdiv);
+    myModaldiv.appendChild(modalContent);                        
+
+    document.body.appendChild(myModaldiv);
+
+
+    // Create REQUEST-POPUP Modal elements 
+    var DataReqModaldiv = document.createElement("div");
+    DataReqModaldiv.setAttribute("id", "GDPRruzcv2wa66-data-request-modal");
+    DataReqModaldiv.setAttribute("class", "GDPRruzcv2wa66datareq-modal");
+    
+    var modalContent = document.createElement("div");
+    modalContent.setAttribute("class", "GDPRruzcv2wa66modal-content-datareq");
+    
+    var innerTitle = document.createElement("p");
+    innerTitle.setAttribute("class", "GDPRruzcv2wa66consenttitle");
+    var innerTitleStrong = document.createElement("strong");
+    var t = document.createTextNode(datareq_line1);
+    innerTitleStrong.appendChild(t);
+    innerTitle.appendChild(innerTitleStrong);
+
+    var closebutton = document.createElement("span");
+    closebutton.setAttribute("id", "GDPRruzcv2wa66-close-data-request-modal");
+    closebutton.setAttribute("class", "GDPRruzcv2wa66close");
+    closebutton.innerHTML = '&times;';
+
+    var seperator = document.createElement("hr");
+    seperator.setAttribute("class", "GDPRruzcv2wa66titleline");
+
+    var dataOptionsDiv = document.createElement("div");
+    dataOptionsDiv.setAttribute("class", "GDPRruzcv2wa66consenttext");
+    dataOptionsDiv.setAttribute("id", "GDPRruzcv2wa66-datareqtext");
+    
+    var dataOptionsTable = document.createElement("table");
+    dataOptionsTable.setAttribute("class", "GDPRruzcv2wa66datareqtable");
+    var row1 = document.createElement("tr");
+    var cell1 = document.createElement("td");
+    cell1.setAttribute("align", "left");
+    cell1.setAttribute("class", "GDPRruzcv2wa66consentsubtitle");
+    cell1.innerHTML = '<i class="fa fa-lock"></i>' + ' ' + datareq_line2;
+    row1.appendChild(cell1);
+    dataOptionsTable.appendChild(row1);
+    
+    var row2 = document.createElement("tr");
+    var cell2 = document.createElement("td");
+    cell2.setAttribute("align", "left");
+    cell2.setAttribute("class", "GDPRruzcv2wa66tdformatingleft");
+    var label1 = document.createElement("label");
+    label1.setAttribute("for", "GDPRruzcv2wa66-reqcopy");
+    label1.setAttribute("class", "GDPRruzcv2wa66containerradio");
+    var label1span1 = document.createElement("span");
+    label1span1.setAttribute("class", "GDPRruzcv2wa66radiolabel");
+    label1span1.innerHTML = datareq_line3;
+    var label1input = document.createElement("input");
+    label1input.setAttribute("id", "GDPRruzcv2wa66-reqcopy");
+    label1input.setAttribute("type", "radio");
+    label1input.setAttribute("name", "GDPRruzcv2wa66requesttype");
+    label1input.setAttribute("value", "reqcopy");
+    var label1span2 = document.createElement("span");
+    label1span2.setAttribute("class", "GDPRruzcv2wa66checkmarkradio");
+    label1.appendChild(label1span1);
+    label1.appendChild(label1input);
+    label1.appendChild(label1span2);
+    cell2.appendChild(label1);
+    row2.appendChild(cell2);
+    dataOptionsTable.appendChild(row2);
+
+    var row3 = document.createElement("tr");
+    var cell3 = document.createElement("td");
+    cell3.setAttribute("align", "left");
+    cell3.setAttribute("class", "GDPRruzcv2wa66tdformatingleft");
+    var label2 = document.createElement("label");
+    label2.setAttribute("for", "GDPRruzcv2wa66-reqdel");
+    label2.setAttribute("class", "GDPRruzcv2wa66containerradio");
+    var label2span1 = document.createElement("span");
+    label2span1.setAttribute("class", "GDPRruzcv2wa66radiolabel");
+    label2span1.innerHTML = datareq_line4;
+    var label2input = document.createElement("input");
+    label2input.setAttribute("id", "GDPRruzcv2wa66-reqdel");
+    label2input.setAttribute("type", "radio");
+    label2input.setAttribute("name", "GDPRruzcv2wa66requesttype");
+    label2input.setAttribute("value", "reqdel");
+    var label2span2 = document.createElement("span");
+    label2span2.setAttribute("class", "GDPRruzcv2wa66checkmarkradio");
+    label2.appendChild(label2span1);
+    label2.appendChild(label2input);
+    label2.appendChild(label2span2);
+    cell3.appendChild(label2);
+    row3.appendChild(cell3);
+    dataOptionsTable.appendChild(row3);
+
+    var inputEmailDiv = document.createElement("div");
+    inputEmailDiv.setAttribute("class", "GDPRruzcv2wa66submitinput");
+    var inputEmail = document.createElement("input");  // Create a <input> element (styled as button via CSS)
+    inputEmail.setAttribute("id", "GDPRruzcv2wa66-emailaddress");
+    inputEmail.setAttribute("type", "email");
+    inputEmail.setAttribute("class", "GDPRruzcv2wa66submittext");
+    inputEmail.setAttribute("name", "email");
+    inputEmail.setAttribute("placeholder", datareq_line5);    
+    inputEmailDiv.appendChild(inputEmail);
+    
+    dataOptionsDiv.appendChild(dataOptionsTable);
+    dataOptionsDiv.appendChild(inputEmailDiv);
+
+    var submitbtnDiv = document.createElement("div");
+    submitbtnDiv.setAttribute("class", "GDPRruzcv2wa66consentwrapper");
+    submitbtn = document.createElement("button");
+    submitbtn.setAttribute("id", "GDPRruzcv2wa66-submitbtn");
+    submitbtn.setAttribute("class", "GDPRruzcv2wa66button1x GDPRruzcv2wa66submitbtn");
+    var x = document.createTextNode(datareq_line6);       // Create a text node
+    submitbtn.appendChild(x);
+    submitbtnDiv.appendChild(submitbtn);
+
+    var CheckEmaildiv = document.createElement("div");
+		CheckEmaildiv.setAttribute("class", "GDPRruzcv2wa66checkemailtext");
+		CheckEmaildiv.setAttribute("id", "GDPRruzcv2wa66-checkemail-id");
+		var innerCheckEmailText = document.createElement("p");
+		var innerStrongText = document.createElement("strong");
+    innerStrongText.innerHTML = text_button_submit;
+    innerCheckEmailText.appendChild(innerStrongText);
+
+		var WrongReqdiv = document.createElement("div");
+		WrongReqdiv.setAttribute("class", "GDPRruzcv2wa66wrongreqtext");
+		WrongReqdiv.setAttribute("id", "GDPRruzcv2wa66-wrongreq-id");
+		var innerWrongReqText = document.createElement("p");
+		var innerStrongText = document.createElement("strong");
+    innerStrongText.innerHTML = text_button_wrongrequest;
+    innerWrongReqText.appendChild(innerStrongText);
+
+    modalContent.appendChild(closebutton);
+    modalContent.appendChild(innerTitle);
+    modalContent.appendChild(seperator);
+    modalContent.appendChild(dataOptionsDiv);
+    WrongReqdiv.appendChild(innerWrongReqText);
+		modalContent.appendChild(WrongReqdiv);
+		CheckEmaildiv.appendChild(innerCheckEmailText);
+		modalContent.appendChild(CheckEmaildiv);
+    modalContent.appendChild(submitbtnDiv);
+    DataReqModaldiv.appendChild(modalContent);                        
+
+    document.body.appendChild(DataReqModaldiv);
+
+
+    // Create REQUEST-ICON Modal elements   
+    var removebutton = document.createElement("BUTTON");
+    removebutton.setAttribute("id", "GDPRruzcv2wa66-gdprremove");
+    removebutton.setAttribute("class", "GDPRruzcv2wa66gdprremovebtn");
+    // New event listener to replace "onclick"
+    removebutton.addEventListener('click', function(){
+                console.log("in remove click");
+                var consent_popup = document.getElementById('GDPRruzcv2wa66consent-request-modal');
+                var datamodal = document.getElementById('GDPRruzcv2wa66-data-request-modal');
+                consent_popup.style.display = "none";
+                datamodal.style.display = "block";
+              });
+
+    var removebuttonlogo = document.createElement("i");
+    removebuttonlogo.setAttribute("class", "fa fa-lock GDPRruzcv2wa66gdprremovebuttonlogo");
+    
+    removebutton.appendChild(removebuttonlogo);
+
+    document.body.appendChild(removebutton);
+  }
+  
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////
+  ////////////// PAGE LOAD SWITCH BOARD //////////////
+  ///////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //window.onload = function() {
+
+    // STEP0: Inject Browser Specific CSS styles
+    browserspecificCSS();
+
+    // STEP1: 
+     // Later This needs to shift to be in the .then() statement so we can pass webserver args  
+
+  	// STEP2: Request IPCHECK endpoint
+    gettext("https://cdn1.gdprinsider.ovh/ipcheck/?shop={{ shop_url }}") //REPLACE WITH URL TO 'IPCHECK' endpoint
+        //.then is a reference to the future. The result variable will be returned whenever a response is 
+        // recieved from the webserver response comes in which depends upon bandwidth and internet speed
+        // Once the webserver responds to IPCHECK request, the code between the .then() will be executed
+
+        .then(function(result) {  // Results will be returned in result variable
+          // data recived from webserver is string, transfom it to JSON to access individual elements
+          var dialoguetext = JSON.parse(result); 
+          //Now that its transformed to a JavaScrippt Object you can access items as class attributes
+          // ex.
+          //console.log(dialoguetext.eu_flag)
+
+          //STEP3: Check Cookie and EU_FLAG
+          //var gdprcookie = getCookie("GDPRruzcv2wa66SudbWOBs7ArjzO3m1D");
+          var gdprcookie = null;
+            
+            // if gdprcookie is null (variable is empty) and EU_FLAG == TRUE then make modal appear
+            if (gdprcookie===null&&dialoguetext.eu_flag=='True') {
+              
+              //Create modal overlay items using "dialoguetext" obtained from webserver
+              createmodals(dialoguetext.store_name, dialoguetext.consent_line1, dialoguetext.consent_line2, dialoguetext.consent_line3a, dialoguetext.consent_line3b, dialoguetext.consent_line3c, dialoguetext.consent_line3d, dialoguetext.consent_line3e, dialoguetext.consent_line4a, dialoguetext.consent_line4b,  dialoguetext.consent_line5, dialoguetext.consent_line6, dialoguetext.consent_line7, dialoguetext.datareq_line1, dialoguetext.datareq_line2, dialoguetext.datareq_line3, dialoguetext.datareq_line4, dialoguetext.datareq_line5, dialoguetext.datareq_line6, dialoguetext.partners_line1, dialoguetext.partners_line2, dialoguetext.partners_line3, dialoguetext.button_decline, dialoguetext.button_wrongrequest, dialoguetext.button_submit);
+
+              // Change View Details text to language translation GDPRruzcv2wa66button2x
+              var view_detail_anchors = document.getElementsByClassName("GDPRruzcv2wa66button2x");
+              var i;
+              for (i = 0; i < view_detail_anchors.length; i++) {
+                  view_detail_anchors[i].innerHTML= dialoguetext.consent_line5;
+              }
+
+							// Get all items needed from elements that were created after page-load in createmodals() function above
+              var consent_popup = document.getElementById('GDPRruzcv2wa66consent-request-modal');
+              var acceptbtn = document.getElementById("GDPRruzcv2wa66-accept-btn");
+              var declinebtn = document.getElementById("GDPRruzcv2wa66-decline-btn");
+              var consent_text = document.getElementById("GDPRruzcv2wa66-consenttext-id");
+							var decline_text = document.getElementById("GDPRruzcv2wa66-decline-id");
+							var wrong_request = document.getElementById("GDPRruzcv2wa66-wrongreq-id");
+							var check_email = document.getElementById("GDPRruzcv2wa66-checkemail-id");
+              var gdprremove = document.getElementById("GDPRruzcv2wa66-gdprremove");
+              var partnerslist = document.getElementById("GDPRruzcv2wa66-partnersscrolllist");
+              var partnerslink = document.getElementById("GDPRruzcv2wa66-displaypartners");
+              var learnmorelink = document.getElementById("GDPRruzcv2wa66-learnmore");
+              var datamodal = document.getElementById('GDPRruzcv2wa66-data-request-modal');
+              var datamodalclose = document.getElementById("GDPRruzcv2wa66-close-data-request-modal");
+              var datasubmitbtn = document.getElementById("GDPRruzcv2wa66-submitbtn");
+              var datareqtext = document.getElementById("GDPRruzcv2wa66-datareqtext");
+
+              // Then switch modal.style.display to block to make modal appear after time_delay
+              setTimeout(function(){
+                consent_popup.style.display = "block";
+              }, {{ time_delay }});
+
+              
+              
+              // Handler for accept button
+              acceptbtn.onclick = function() {
+                consent_popup.style.display = "none";
+                var d = new Date();
+                var n = d.toString(); // convert date object into string
+                postdata = "requesttype=consentaccept&shopurl={{ shop_url }}&userhash=" + n;
+                postxhml(postdata, "https://cdn1.gdprinsider.ovh/dataevent/"); // POST that user accepted
+                setCookie("GDPRruzcv2wa66SudbWOBs7ArjzO3m1D", n, 365); // Call cookie dropping function above
+              };
+
+              // Handler for decline button
+							declinebtn.onclick = function() {
+							  decline_text.style.display = "block";
+							  };
+
+              // Handler for Parnters link
+              partnerslink.onclick = function() {
+                partnerslist.style.display = "block";
+              };
+
+              // Handler for LearnMore link
+              learnmorelink.onclick = function() {
+                partnerslist.style.display = "block";
+              };
+            
+              // Handler for GDPR Data Request Icon ()
+              //gdprremove.onclick = function() {
+              //  consent_popup.style.display = "none";
+              //  datamodal.style.display = "block";
+              //};
+
+              // Handler for (x) close button in GDPR Data Request Modal
+              datamodalclose.onclick = function() {
+                consent_popup.style.display = "none";
+                datamodal.style.display = "none";
+                
+                // get cookie and if GDPR cookie is not set then re-display modal
+                var gdprcookie = getCookie("GDPRruzcv2wa66SudbWOBs7ArjzO3m1D");
+                console.log(gdprcookie);
+                if (gdprcookie===null&&dialoguetext.eu_flag=='True') {
+                  consent_popup.style.display = "block";
+                }
+                else
+                {
+                  consent_popup.style.display = "none";
+                }
+              };
+
+              //Handler for GDPR Data Request Submit Button
+              datasubmitbtn.onclick = function() {
+                var datacopy_checkbox = document.getElementById("GDPRruzcv2wa66-reqcopy").checked;
+                var datadel_checkbox = document.getElementById("GDPRruzcv2wa66-reqdel").checked;
+                var email_address = document.getElementById("GDPRruzcv2wa66-emailaddress").value;
+
+								// display the WrongReq text if email is empty
+                if ((email_address == '') || (email_address == null)){
+                  wrong_request.style.display = "block";
+                  return; 
+                }
+                
+                if (datadel_checkbox == true)
+                {
+                  var data = "requesttype=reqdel&shopurl={{ shop_url }}&country=";
+                  data = data + dialoguetext.country;
+                  data = data + "&email=";
+                  data = data + email_address;
+                }
+                else if (datacopy_checkbox == true)
+                {
+                  var data = "requesttype=reqcopy&shopurl={{ shop_url }}&country=";
+                  data = data + dialoguetext.country
+                  data = data + "&email=";
+                  data = data + email_address;
+                }
+	     					// display the WrongReq text if no selection is made 
+                else if ((datadel_checkbox == false) && (datacopy_checkbox == false))
+                {
+                  wrong_request.style.display = "block";
+                  return;  
+                }
+
+                postxhml(data, "https://cdn1.gdprinsider.ovh/dataevent/"); // POST user request for processing
+                datareqtext.style.display = "none";
+                datasubmitbtn.style.display = "none";
+                wrong_request.style.display = "none";
+                check_email.style.display = "block";
+              };
+
+						} 
+
+						else if (dialoguetext.eu_flag=='False') { //else if user is not in EU  
+              return;
+            }
+            
+            else { // if gdprcookie is not a null variable (if it contains something)  
+              console.log(gdprcookie)
+              consent_popup.style.display = "none"; // Then switch modal.style.display to NONE (a.k.a don't display)
+          }
+        })
+        
+				.catch(function(error) {
+          console.log(error);
+        }); 
+				
+				//.catch(function() {
+        //  console.log("Error Encountered - Endpoint Unreachable"); // What to do in case of error 
+        //  consent_popup.style.display = "none"; // By default don't display it to not show to all users but give user
+                                        // the option to display it in Dashboard
+
+        //});
+  
+  //};

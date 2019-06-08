@@ -1,0 +1,36 @@
+{% extends "installer/decline_encaps.html" %}
+	{% block content %}
+	{% load static %}
+	  <section class="ui-annotated-section-container">
+			<div class="ui-annotated-section">
+				<div class="ui-annotated-section__annotation" style="text-align: center;">
+					
+					<div class="margin-child">
+						<img src="{% static 'images/decline_icon.png' %}" class="reset-elem">
+					</div>
+					
+					<div class="ui-annotated-section__title">
+						<h2 class="ui-heading">Ooops! Your app charge has been declined.</h2>
+					</div>
+					<div class="ui-annotated-section__description">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Consent Forms -->
+		<section class="ui-annotated-section-container">
+			<div class="ui-annotated-section">
+			<diV style="text-align: center; margin-left: 10%; margin-right: 10%;">
+			<p></p>
+			</br>
+			<p>In order to continue using GDPR Compliance 360 please confirm the recurring charge.</p>
+			</br>
+			<p>To accept the charge navigate to the Apps section in your Shopify Store Admin, and click on the GDPR Compliance 360 link, you will then be prompted to accept the charge.</p>
+			</br>
+			<p>Alternatively, if you wish to uninstall the app completely, you may do so by clicking the <img src="{% static 'images/delete_app.png' %}">  icon.</p>  
+			</div>
+				
+			</div>
+	  </section>	
+	{% endblock content %}

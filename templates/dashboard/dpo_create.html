@@ -1,0 +1,235 @@
+{% extends "dashboard/dashboard_edit_encaps.html" %}
+  {% block content %}
+  {% load static %}  
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3></h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            
+
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Event Details <small></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form action="/dpcreate/" method="post" class="form-horizontal form-label-left input_mask">
+                      {% csrf_token %}
+                      <input type="hidden" name="submitted" value="submitted">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Data Event ID</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" name="event_id" class="form-control" readonly="readonly" value="{{ eventdeatz.0 }}" placeholder="{{ eventdeatz.0 }}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Customer ID</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" name="customer_id" class="form-control" value="{{ eventdeatz.6 }}" placeholder="{{ eventdeatz.6 }}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Event <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" id="datepicker1"  name="date" class="form-control" value="{{ eventdeatz.1 }}" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Event Type</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="form-control" name="event_type">
+                            <option value="{{ eventdeatz.2 }}">{{ eventdeatz.2 }}</option>
+                            <option value="Data Collection">Data Collection</option>
+                            <option value="Data Rectification">Data Rectification</option>
+                            <option value="Data Removal Request">Data Removal Request</option>
+                            <option value="Data Removal Request Processed">Data Removal Request Processed</option>
+                            <option value="Data Removal Request Queued">Data Removal Request Queued</option>
+                            <option value="Invalid Data Removal Request">Invalid Data Removal Request</option>
+                            <option value="Data Access Request">Data Access Request</option>
+                            <option value="Data Consent">Data Consent</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Legal Basis</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="form-control" name="legal_basis">
+                            <option value={{ eventdeatz.9 }}>{{ eventdeatz.9 }}</option>
+                            <option value="Consent">Consent</option>
+                            <option value="Vital Interest">Vital Interest</option>
+                            <option value="Public Interest">Public Interest</option>
+                            <option value="Legal Compliance">Legal Compliance</option>
+                            <option value="Preparing or Performing a Contract (Product Sales)">Contract (Product Sales)</option>
+                            <option value="Rights and Interests of Subject or Controller">Rights and Interests of Data Subject or Data Controller</option>
+                            <option value="Preparing or Performing a Contract (Product Sales) and Consent (Granted for Marketing)">Contract (Product Sales) and Consent (Granted for Marketing)</option>
+                            
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Purpose of Data Processing <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <textarea class="form-control" rows="3" name="purpose" value="">{{ eventdeatz.7 }}</textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Description <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <textarea class="form-control" rows="3" name="comment" value="">{{ eventdeatz.5 }}</textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Status
+                            <br>
+                            <small class="text-navy"></small>
+                          </label>
+
+                          <div class="col-md-9 col-sm-9 col-xs-12">
+                          {% if eventdeatz.8 == "Pending" %}
+                            <div class="radio">
+                              <label>
+                                <input type="radio" class="flat" name="iCheck" value="Completed"> Completed
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" class="flat" checked name="iCheck" value="Pending"> Pending
+                              </label>
+                            </div>
+                          {% else %}
+                            <div class="radio">
+                              <label>
+                                <input type="radio" class="flat" checked name="iCheck" value="Completed"> Completed
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" class="flat" name="iCheck" value="Pending"> Pending
+                              </label>
+                            </div>
+                          {% endif %}
+                          </div>
+                        </div>
+
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                          <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                            <a href="/dpactivities/" class="btn btn-primary">Cancel</a>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                          </div>
+                        </div>
+
+                    </form>
+                  </div>
+                </div>
+
+
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Frequently Asked Questions</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    
+											<!-- start accordion -->
+                    <div class="accordion" id="accordion1" role="tablist" aria-multiselectable="true">
+
+
+                     <div class="panel">
+                        <a class="panel-heading" role="tab" id="headingOne1" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+                          <h5 class="panel-title">What is legal basis for processing?</h5>
+                        </a>
+                        <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+													  <p><strong>EU GDPR recognizes six legitimate reasons which allow merchants to process customer data, at least one of these must apply to your situation whenever you process customer personal data.</strong></p>
+														<p><strong>Consent:</strong> the customer has granted consent for you to process their personal data. This would be the most likely legal basis for most of your store's data processing activities relating to marketing.</p>
+														<p><strong>Contract:</strong> the processing is necessary for the performance of a contract. In this context, a contract refers to any event where there is an element of exchange (such as the exchange of goods or services for money). This would be the most likely legal basis for most of your store's data processing activities relating to sales processing.</p>
+														<p><strong>Legal obligation:</strong> the processing is necessary to ensure compliance with legal obligations.</p>
+														<p><strong>Public interests:</strong> the processing is necessary to ensure public interests (ex. fraud detection).</p>
+														<p><strong>Legitimate interests:</strong> the processing is necessary to ensure the interests of the merchant or thrid parties.</p>
+														<p><strong>Vital interests:</strong> the processing is necessary to ensure individual safety.</p>
+
+                         </div>
+                        </div>
+                      </div>
+
+                      <div class="panel">
+                        <a class="panel-heading collapsed" role="tab" id="headingTwo1" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo">
+                          <h5 class="panel-title">What are the different event types?</h5>
+                        </a>
+                        <div id="collapseTwo1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+													
+														<p><strong>Data Consent:</strong> store visitor has accepted the GDPR data policy terms and conditions.</p> 
+														<p><strong>Data Collection:</strong> customer personal data has been collected and registered in shop database.</p> 
+														<p><strong>Data Rectification:</strong> customer personal data has been modified by the customer or the store owner.</p>
+														<p><strong>Data Access Request:</strong> customer data access request has been recieved and processed.</p>
+														<p><strong>Data Removal Request:</strong> customer data removal request has been recieved.</p>
+														<p><strong>Data Removal Request Queued:</strong> customer data removal request has been queued for processing pending termination of the charge-back period.</p>
+														<p><strong>Data Removal Request Processed:</strong> customer removal request has been processed following the termination of the charge-back period.</p>
+                          
+													</div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- end of accordion --> 
+
+
+
+									</div>
+                </div>
+                
+              </div>
+
+
+              </div>
+              </div>
+              </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            <a href="https://www.gdprdynamics.com">GDPR Compliance 360</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+{% endblock content %}

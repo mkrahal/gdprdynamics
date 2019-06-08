@@ -1,0 +1,625 @@
+{% extends "dashboard/dashboard_cust_encaps.html" %}
+  {% block content %}
+  {% load static %}  
+
+			<!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div style="float: left; margin-bottom: 1rem;">
+                <h2 class=""></h2>
+                  <div class="clearfix"></div>
+              </div>
+
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                
+                  <form action="/custpopup/" method="post" class="form-horizontal form-label-left"  id="customization_form">
+                  {% csrf_token %}
+                  {% load static %}
+                  <input type="hidden" name="submitted" value="submitted">
+                  
+                  <div class="form-group">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 text-center" style="font-size: 15px;">
+                        </br>
+                        <h2 class="StepTitle text-center" style="font-size: 22px; color: #34495E;"><strong>Default Privacy Center Behaviour</strong></h2>
+                        <p class="text-center">
+                          Select the behviour of your privacy center.
+                        </p>                              
+                        <div style="padding-top: 1.5rem;">
+                          <div class="col-md-12 col-sm-12 col-xs-12 text-left">
+                          {% if behaviour == "Explicit" %}
+                            <div class="radio">
+                              <label style="padding-top: 10px;">
+                                <input type="radio" class="flat" name="iCheck" value="Default"> Set GDPR policy widget to minimize on page load. (Default)
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label style="padding-top: 10px;">
+                                <input type="radio" class="flat" checked name="iCheck" value="Explicit"> Set GDPR policy widget to display until consent is granted.
+                              </label>
+                            </div>
+                          {% else %}
+                            <div class="radio">
+                              <label style="padding-top: 10px;">
+                                <input type="radio" class="flat" checked name="iCheck" value="Default">  Set GDPR policy widget to minimize on page load. (Default)
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label style="padding-top: 10px;">
+                                <input type="radio" class="flat" name="iCheck" value="Explicit"> Set GDPR policy widget to display until consent is granted.
+                              </label>
+                            </div>
+                          {% endif %}
+                          </div>
+
+                          
+                        </div>
+
+                      </div><!--col8-->
+                      <div class="col-md-3"></div>
+                    </div><!-- form group -->
+
+                    <div class="form-group">
+                      </br>
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6 text-center" style="font-size: 15px;"><hr style="border-top: 2px solid #eee;"></div>
+                      <div class="col-md-3"></div>
+                      </br>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 text-center" style="font-size: 15px;">
+                        </br>
+                        <h2 class="StepTitle text-center" style="font-size: 22px; color: #34495E;"><strong>Choose Colors</strong></h2>
+                        <p class="text-center">
+                          Use HTML hex color codes or click the drop-down menu to use the color picker.
+                        </p>                              
+                        <div style="padding-top: 1.5rem;">
+                          <span>
+                            <table>
+                              <tr class="tbl-no-boder-bottom">
+                                <td class="tbl-no-boder-bottom">
+                                  <p>Background Color</p>
+                                </td>
+
+                                <td class="tbl-no-boder-bottom">
+                                  <input type="text" id="hex-background-color1" name="hex-background-color" value="{{ background_color }}" class="hexcodeinput">
+                                  <input type='text' id="full1" name="background-color" value="">
+                                </td>
+                              </tr>
+
+                              <tr class="tbl-no-boder-bottom">
+                                <td class="tbl-no-boder-bottom">
+                                  <p>Active Tab Text Color</p>
+                                </td>
+
+                                <td class="tbl-no-boder-bottom">
+                                  <input type="text" id="hex-background-color6" name="active-tab-text-color" value="{{ active_tab_text_color }}" class="hexcodeinput">
+                                  <input type='text' id="full6" name="text-color" value=""/>
+                                </td>
+                              </tr>
+
+                              <tr class="tbl-no-boder-bottom">
+                                <td class="tbl-no-boder-bottom">
+                                  <p>Primary Text Color</p>
+                                </td>
+
+                                <td class="tbl-no-boder-bottom">
+                                  <input type="text" id="hex-background-color2" name="hex-text-color" value="{{ text_color }}" class="hexcodeinput">
+                                  <input type='text' id="full2" name="text-color" value=""/>
+                                </td>
+                              </tr>
+                              
+                              <tr class="tbl-no-boder-bottom">
+                                <td class="tbl-no-boder-bottom">
+                                  <p>Secondary Text Color</p>
+                                </td>
+
+                                <td class="tbl-no-boder-bottom">
+                                  <input type="text" id="hex-background-color5" name="hex-secondary-text-color" value="{{ secondary_text_color }}" class="hexcodeinput">
+                                  <input type='text' id="full5" name="secondary-text-color" value=""/>
+                                </td>
+                              </tr>
+                              
+                              <tr class="tbl-no-boder-bottom">
+                                <td class="tbl-no-boder-bottom">
+                                  <p>Accept Button Color</p>
+                                </td>
+
+                                <td class="tbl-no-boder-bottom">
+                                  <input type="text" id="hex-background-color3" name="hex-accept-color" value="{{ accept_color }}" class="hexcodeinput">
+                                  <input type='text' id="full3" name="accept-button-color" value=""/>
+                                </td>
+                              </tr>
+
+                              <tr class="tbl-no-boder-bottom">
+                                <td class="tbl-no-boder-bottom">
+                                  <p>Decline Button Color</p>
+                                </td>
+
+                                <td class="tbl-no-boder-bottom">
+                                  <input type="text" id="hex-background-color4" name="hex-decline-color" value="{{ decline_color }}" class="hexcodeinput">
+                                  <input type='text' id="full4" name="decline-button-color" value=""/>
+                                </td>
+                              </tr>
+                             
+                              <tr class="tbl-no-boder-bottom">
+                                <td class="tbl-no-boder-bottom">
+                                  <button id="reset-styles" type="button" class="btn blue-primary" onclick="resetfunc()"><strong>Restore Defaults </strong></button>
+                                </td>
+
+                                <td class="tbl-no-boder-bottom">
+                                  <input id='reset-value' type="hidden" name='reset-flag' value='False'>
+                                </td>
+                              </tr>
+                            </table>
+                          </span>
+                        </div>
+
+                      </div><!--col8-->
+                      <div class="col-md-3"></div>
+                    </div><!-- form group -->
+                  
+                    <div class="form-group">
+                      </br>
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6 text-center" style="font-size: 15px;"><hr style="border-top: 2px solid #eee;"></div>
+                      <div class="col-md-3"></div>
+                      </br>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 text-center" style="font-size: 15px;">
+                        </br>
+                        <h2 class="StepTitle text-center" style="font-size: 22px; color: #34495E;"><strong>Choose Font</strong></h2>
+                        <p class="text-center">
+                          Select a font for the data policy widget.
+                        </p>                              
+                        <div style="padding-top: 1.5rem;">
+                           <p>
+                    
+                              <input id="fonttype" type="hidden" name="fonttype" value=""/>
+
+                              <button id="font_lato" class="btn font-bttn margin" type="button" onclick="fontfunc('lato', this.id)" style="font-family: 'Lato'">Lato</button>
+
+                              <button id="font_roboto" class="btn font-bttn margin" type="button" onclick="fontfunc('roboto', this.id)" style="font-family: 'Roboto'">Roboto</button>
+                              
+                              <button id="font_josefin" class="btn font-bttn margin" type="button" onclick="fontfunc('josefin', this.id)" style="font-family: 'Josefin Sans'">Josefin Sans</button>
+                              
+                              <button id="font_lobster" class="btn font-bttn margin" type="button" onclick="fontfunc('lobster', this.id)" style="font-family: 'Lobster'">Lobster</button>
+                              
+                              <button id="font_open" class="btn font-bttn margin" type="button" onclick="fontfunc('open', this.id)" style="font-family: 'Open Sans'">Open Sans</button>
+
+                              <button id="font_krona" class="btn font-bttn margin" type="button" onclick="fontfunc('krona', this.id)" style="font-family: 'Krona One'">Krona One</button>
+                              
+                              <button id="font_indie" class="btn font-bttn margin" type="button" onclick="fontfunc('indie', this.id)" style="font-family: 'Indie Flower', cursive;">Indie Flower</button>
+                              
+                              <button id="font_bangers" class="btn font-bttn margin" type="button" onclick="fontfunc('bangers', this.id)" style="font-family: 'Bangers'">Bangers</button>
+                              
+                              <button id="font_varela" class="btn font-bttn margin" type="button" onclick="fontfunc('varela', this.id)" style="font-family: 'Varela Round'">Varela Round</button>                     
+                              <button id="font_bree" class="btn font-bttn margin" type="button" onclick="fontfunc('bree', this.id)" style="font-family: 'Bree Serif', serif;">Bree Serif</button>
+                              
+                              <button id="font_montserrat" class="btn font-bttn margin" type="button" onclick="fontfunc('montserrat', this.id)" style="font-family: 'Montserrat'">Montserrat</button>
+                              
+                              <button id="font_nanum" class="btn font-bttn margin" type="button" onclick="fontfunc('nanum', this.id)" style="font-family: 'Nanum Pen Script', cursive;">Nanum Pen Script</button>
+                              
+                              <button id="font_muli" class="btn font-bttn margin" type="button" onclick="fontfunc('muli')" style="font-family: 'Muli'">Muli</button>
+
+                              <button id="font_merriweather" class="btn font-bttn margin" type="button" onclick="fontfunc('merriweather', this.id)" style="font-family: 'Merriweather Sans', sans-serif;">Merriweather Sans</button>
+                              
+                              <button id="font_mystery" class="btn font-bttn margin" type="button" onclick="fontfunc('mystery', this.id)" style="font-family: 'Mystery Quest'">Mystery Quest</button>
+
+                              <button id="font_serif" class="btn font-bttn margin" type="button" onclick="fontfunc('serif', this.id)" style="font-family: 'Serif'">Serif</button>
+
+                              <button id="font_helvetica" class="btn font-bttn margin" type="button" onclick="fontfunc('helvetica', this.id)" style="font-family: 'Helvetica'">Helvetica</button>
+
+                              <button id="font_verdana" class="btn font-bttn margin" type="button" onclick="fontfunc('verdana', this.id)" style="font-family: 'Verdana'">Verdana</button>
+                              
+                              <button id="font_shadows" class="btn font-bttn margin" type="button" onclick="fontfunc('shadows', this.id)" style="font-family: 'Shadows Into Light'">Shadows Light</button>
+                              
+                              <button id="font_oswald" class="btn font-bttn margin" type="button" onclick="fontfunc('oswald', this.id)" style="font-family: 'Oswald'">Oswald</button>
+
+                              <button id="font_ubuntu" class="btn font-bttn margin" type="button" onclick="fontfunc('ubuntu', this.id)" style="font-family: 'Ubuntu'">Ubuntu</button>
+                              
+                              <button id="font_righteous" class="btn font-bttn margin" type="button" onclick="fontfunc('righteous', this.id)" style="font-family: 'Righteous'">Righteous</button>
+                              
+                              <button id="font_courier" class="btn font-bttn margin" type="button" onclick="fontfunc('courier', this.id)" style="font-family: 'Courier'">Courier</button>
+                              
+                              <button id="font_raleway" class="btn font-bttn margin" type="button" onclick="fontfunc('raleway', this.id)" style="font-family: 'Raleway'">Raleway</button>
+                              
+                              <button id="font_carter" class="btn font-bttn margin" type="button" onclick="fontfunc('carter', this.id)" style="font-family: 'Carter One'">Carter One</button>
+
+                              <button id="font_pacifico" class="btn font-bttn margin" type="button" onclick="fontfunc('pacifico', this.id)" style="font-family: 'Pacifico', cursive;">Pacifico</button>
+
+                              <button id="font_exo" class="btn font-bttn margin" type="button" onclick="fontfunc('exo', this.id)" style="font-family: 'Exo 2'">Exo 2</button>
+                           </p>
+                        </div>
+
+                      </div><!--col8-->
+                      <div class="col-md-3"></div>
+                    </div><!-- form group -->
+
+                    <div class="form-group">
+                      </br>
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6 text-center" style="font-size: 15px;"><hr style="border-top: 2px solid #eee;"></div>
+                      <div class="col-md-3"></div>
+                      </br>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 text-center" style="font-size: 15px;">
+                        </br>
+                        <h2 class="StepTitle text-center" style="font-size: 22px; color: #34495E;"><strong>Time Delay to Display</strong></h2>
+                        <p class="text-center">
+                          Number of seconds to wait, after page load, before displaying the widget. (By default 0)
+                        </p>                              
+                        <div style="padding-top: 1.5rem;">
+                          <input placeholder="" class="form-control col-md-7 col-xs-12" size="30" type="text" value="{{ time_delay }}" name="time-delay" id="form-font-size-id">
+                        </div>
+
+                      </div><!--col8-->
+                      <div class="col-md-3"></div>
+                    </div><!-- form group -->
+
+
+                      <button class="save-bttn-cust" type="submit">
+                        <div class="save-img">
+                          <img src="{% static 'images/save.png' %}">
+                        </div>
+                         Save
+                      </button>
+
+
+                </form>
+                    <!-- End SmartWizard Content -->
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+        </div>
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            <a href="https://www.gdprdynamics.com">GDPR Compliance 360</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+
+ <script type="text/javascript">
+    window.onload = function(){
+      var selectedfont = document.getElementById('{{ font_focus }}');
+      selectedfont.classList.add("btn-success");
+      selectedfont.classList.add("current_selected_font");
+      var fontstr = '{{ font_focus }}';
+      var fontvalue = fontstr.slice(5);
+      document.getElementById('fonttype').value = fontvalue;
+    }
+  </script>
+
+  <script type="text/javascript">
+  function resetfunc() {
+    var resetinput = document.getElementById("reset-value");
+    resetinput.value = "True";
+    document.getElementById("customization_form").submit();
+  }
+  </script>
+
+  <script type="text/javascript">
+  function fontfunc(fontname, id) {
+    document.getElementById('fonttype').value = fontname;
+    var oldfont = document.getElementsByClassName("current_selected_font")
+    oldfont[0].classList.remove("btn-success");
+    oldfont[0].classList.remove("current_selected_font");
+    var newfont = document.getElementById(id);
+    newfont.classList.add("btn-success");
+    newfont.classList.add("current_selected_font");
+  }
+  </script>
+
+
+  <script type="text/javascript">
+
+    $("#full1").spectrum({
+        color: "{{ background_color }}",
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: true,
+        showPalette: true,
+        showSelectionPalette: true,
+        maxSelectionSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        move: function (color) {
+            $('#hex-background-color1').val(color.toHexString());
+        },
+        show: function () {
+        
+        },
+        beforeShow: function () {
+        
+        },
+        hide: function () {
+        
+        },
+        change: function() {
+            
+        },
+        palette: [
+            ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+            "rgb(204, 204, 204)", "rgb(217, 217, 217)","rgb(255, 255, 255)"],
+            ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+            "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"], 
+            ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)", 
+            "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)", 
+            "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)", 
+            "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)", 
+            "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)", 
+            "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+            "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+            "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+            "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)", 
+            "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
+        ]
+    });
+
+    var value = $("#full1").val();
+    console.log(value);   
+
+  </script>
+
+  <script type="text/javascript">
+
+    $("#full2").spectrum({
+        color: "{{ text_color }}",
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: true,
+        showPalette: true,
+        showSelectionPalette: true,
+        maxSelectionSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        move: function (color) {
+          $('#hex-background-color2').val(color.toHexString());
+            
+        },
+        show: function () {
+        
+        },
+        beforeShow: function () {
+        
+        },
+        hide: function () {
+        
+        },
+        change: function() {
+            
+        },
+        palette: [
+            ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+            "rgb(204, 204, 204)", "rgb(217, 217, 217)","rgb(255, 255, 255)"],
+            ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+            "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"], 
+            ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)", 
+            "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)", 
+            "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)", 
+            "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)", 
+            "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)", 
+            "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+            "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+            "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+            "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)", 
+            "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
+        ]
+    });
+  </script>
+
+  <script type="text/javascript">
+
+    $("#full3").spectrum({
+        color: "{{ accept_color }}",
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: true,
+        showPalette: true,
+        showSelectionPalette: true,
+        maxSelectionSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        move: function (color) {
+          $('#hex-background-color3').val(color.toHexString());
+            
+        },
+        show: function () {
+        
+        },
+        beforeShow: function () {
+        
+        },
+        hide: function () {
+        
+        },
+        change: function() {
+            
+        },
+        palette: [
+            ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+            "rgb(204, 204, 204)", "rgb(217, 217, 217)","rgb(255, 255, 255)"],
+            ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+            "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"], 
+            ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)", 
+            "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)", 
+            "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)", 
+            "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)", 
+            "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)", 
+            "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+            "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+            "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+            "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)", 
+            "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
+        ]
+    });
+
+  </script>
+
+  <script type="text/javascript">
+
+    $("#full4").spectrum({
+        color: "{{ decline_color }}",
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: true,
+        showPalette: true,
+        showSelectionPalette: true,
+        maxSelectionSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        move: function (color) {
+          $('#hex-background-color4').val(color.toHexString());
+            
+        },
+        show: function () {
+        
+        },
+        beforeShow: function () {
+        
+        },
+        hide: function () {
+        
+        },
+        change: function() {
+            
+        },
+        palette: [
+            ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+            "rgb(204, 204, 204)", "rgb(217, 217, 217)","rgb(255, 255, 255)"],
+            ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+            "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"], 
+            ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)", 
+            "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)", 
+            "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)", 
+            "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)", 
+            "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)", 
+            "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+            "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+            "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+            "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)", 
+            "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
+        ]
+    });
+
+  </script>
+  
+  <script type="text/javascript">
+
+    $("#full5").spectrum({
+        color: "{{ secondary_text_color }}",
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: true,
+        showPalette: true,
+        showSelectionPalette: true,
+        maxSelectionSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        move: function (color) {
+          $('#hex-background-color5').val(color.toHexString());
+            
+        },
+        show: function () {
+        
+        },
+        beforeShow: function () {
+        
+        },
+        hide: function () {
+        
+        },
+        change: function() {
+            
+        },
+        palette: [
+            ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+            "rgb(204, 204, 204)", "rgb(217, 217, 217)","rgb(255, 255, 255)"],
+            ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+            "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"], 
+            ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)", 
+            "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)", 
+            "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)", 
+            "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)", 
+            "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)", 
+            "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+            "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+            "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+            "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)", 
+            "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
+        ]
+    });
+
+  </script>
+  <script type="text/javascript">
+
+    $("#full6").spectrum({
+        color: "{{ active_tab_text_color }}",
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: true,
+        showPalette: true,
+        showSelectionPalette: true,
+        maxSelectionSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        move: function (color) {
+          $('#hex-background-color6').val(color.toHexString());
+            
+        },
+        show: function () {
+        
+        },
+        beforeShow: function () {
+        
+        },
+        hide: function () {
+        
+        },
+        change: function() {
+            
+        },
+        palette: [
+            ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+            "rgb(204, 204, 204)", "rgb(217, 217, 217)","rgb(255, 255, 255)"],
+            ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+            "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"], 
+            ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)", 
+            "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)", 
+            "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)", 
+            "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)", 
+            "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)", 
+            "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+            "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+            "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+            "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)", 
+            "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
+        ]
+    });
+
+  </script>
+{% endblock content %}

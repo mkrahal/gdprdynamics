@@ -1,0 +1,451 @@
+{% extends "dashboard/dashboard_encaps.html" %}
+  {% block content %}
+  {% load static %}        
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <!-- top tiles -->
+          <div class="row tile_count">
+            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Data Processing Activities</span>
+              <div class="count green">{{ processing_total|default_if_none:"-" }}</div>
+              <span class="count_bottom"><i class="green"><i class=""></i>Last Entry </i> {{ processing_date|default_if_none:"-" }}</span>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Data Assets</span>
+              <div class="count">{{ data_assets_total|default_if_none:"-" }}</div>
+              <span class="count_bottom"><i class="green"><i class=""></i>Last Entry </i> {{ data_assets_date|default_if_none:"-" }}</span>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Data Sharing Partners</span>
+              <div class="count">{{ legal_entities_total|default_if_none:"-" }}</div>
+              <span class="count_bottom"><i class="green"><i class=""></i>Last Entry </i> {{ legal_entities_date|default_if_none:"-" }}</span>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Data Officer Activities</span>
+              <div class="count">{{ dpo_activities_total|default_if_none:"-" }}</div>
+              <span class="count_bottom"><i class="green"><i class=""></i>Last Entry </i> {{ dpo_activities_date|default_if_none:"-" }}</span>
+            </div>
+          </div>
+          <!-- /top tiles -->
+
+            
+
+          <div class="row">
+
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                  <h2>GDPR Platform Overview</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      <span><h4>Module</h4></span>
+                    </div>
+                    <div class="w_left w_25"></div>
+                    <div class="w_center w_20" style="margin-top: 3px;">
+                      <span>
+                        <h4>Status</h4>
+                      </span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      <span>Data Policy Widgets</span>
+                    </div>
+                    <div class="w_left w_25"></div>
+                    <div class="w_center w_20" style="margin-top: 3px;">
+                      <span>
+                        <button type="button" class="btn btn-success btn-xs">Enabled</button>
+                      </span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      <span>Data Request Platform</span>
+                    </div>
+                    <div class="w_left w_25"></div>
+                    <div class="w_center w_20" style="margin-top: 3px;">
+                      <span>
+                        <button type="button" class="btn btn-success btn-xs">Enabled</button>
+                      </span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      <span>Data Processing Audit Log</span>
+                    </div>
+                    <div class="w_left w_25"></div>
+                    <div class="w_center w_20" style="margin-top: 3px;">
+                      <span>
+                        <button type="button" class="btn btn-success btn-xs">Enabled</button>
+                      </span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      <span>Smart GeoIP Filtering</span>
+                    </div>
+                    <div class="w_left w_25"></div>
+                    <div class="w_center w_20" style="margin-top: 3px;">
+                      <span>
+                        {% if ip_filter_status %}
+                          <button type="button" class="btn btn-success btn-xs">Enabled</button>
+                        {% else %}
+                          <button type="button" class="btn btn-danger btn-xs">Disabled</button>
+                        {% endif %}
+                      </span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      <span>Email Service Integration</span>
+                    </div>
+                    <div class="w_left w_25"></div>
+                    <div class="w_center w_20" style="margin-top: 3px;">
+                      <span>
+                        {% if email_service_integration %}
+                          <button type="button" class="btn btn-success btn-xs">Enabled</button>
+                        {% else %}
+                          <button type="button" class="btn btn-danger btn-xs">Disabled</button>
+                        {% endif %}
+                      </span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_320 overflow_hidden">
+                <div class="x_title">
+                  <h2>Data Inventory</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+                      
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <table class="" style="width:100%">
+                    <tr>
+                      <th style="width:37%;">
+                        <p>Top 5</p>
+                      </th>
+                      <th>
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                          <p class="">Data Event</p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                          <p class="">Share</p>
+                        </div>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <canvas class="canvasDoughnut" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                      </td>
+                      <td>
+                        <table class="tile_info">
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square blue"></i>Activities </p>
+                            </td>
+                            <td>{{ processing_total|default_if_none:0 }}</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square red"></i>Assets </p>
+                            </td>
+                            <td>{{ data_assets_total|default_if_none:0 }}</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square purple"></i>Rectification </p>
+                            </td>
+                            <td>{{ total_rectification|default_if_none:0 }}</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square green"></i>Access </p>
+                            </td>
+                            <td>{{ total_access_requests|default_if_none:0 }}</td>
+                          </tr> 
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square aero"></i>Removal </p>
+                            </td>
+                            <td>{{ total_removal_requests|default_if_none:0 }}</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                  <h2>Quick Settings</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+                      
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="dashboard-widget-content">
+                    <ul class="quick-list">
+                      <li><i class="fa fa-calendar-o"></i><a href="/advancedsettings/?scrolltodiv=purposeref">Data Collection</a>
+                      </li>
+                      <li><i class="fa fa-bars"></i><a href="/advancedsettings/?scrolltodiv=sharingref">Data Sharing</a>
+                      </li>
+                      <li><i class="fa fa-bar-chart"></i><a href="/advancedsettings/?scrolltodiv=mrktngref">Marketing Services</a> </li>
+                      <li><i class="fa fa-line-chart"></i><a href="/advancedsettings/?scrolltodiv=emailref">Email Services</a>
+                      </li>
+                      <li><i class="fa fa-bar-chart"></i><a href="/advancedsettings/?scrolltodiv=customref">Custom Notice</a> </li>
+                      <li><i class="fa fa-area-chart"></i><a href="/advancedsettings/?scrolltodiv=geoipref">GeoIP Filtering</a>
+                      </li>
+                    </ul>
+
+                    <div class="sidebar-widget">
+                        <h4>Setup Completion</h4>
+                        <canvas width="150" height="80" id="chart_gauge_01" class="" style="width: 160px; height: 100px;"></canvas>
+                        <div class="goal-wrapper">
+                          <span id="gauge-text" class="gauge-value pull-left">0</span>
+                          <span class="gauge-value pull-left">%</span>
+                          <span id="goal-text" class="goal-value pull-right">100%</span>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+
+
+              <div class="row">
+
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Recent Activities</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+                        
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <div class="dashboard-widget-content">
+
+                      <ul class="list-unstyled timeline widget" style="word-break: break-all;">
+                        <li>
+                          <div class="block">
+                            <div class="block_content">
+                              <h2 class="title">
+                                  <a style="font-size: 15px;" {% if  most_recent_list.0.eventid %} href="https://cdn1.gdprinsider.ovh/dpedit/?getdetails={{ most_recent_list.0.eventid|default_if_none:'' }}&dkey={{ download_key }}" {% endif %}>{{ most_recent_list.0.eventtype|default_if_none:"-" }} <i class="fa fa-chevron-right"></i> Customer ID: {{ most_recent_list.0.customerid|default_if_none:"-" }}</a>
+                                            </h2>
+                              <div class="byline">
+                                <span>{{ most_recent_list.0.date|default_if_none:"-" }} </span>
+                              </div>
+                              <p class="excerpt"></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="block">
+                            <div class="block_content">
+                              <h2 class="title">
+                                  <a style="font-size: 15px;" {% if  most_recent_list.1.eventid %} href="https://cdn1.gdprinsider.ovh/dpedit/?getdetails={{ most_recent_list.1.eventid|default_if_none:'' }}&dkey={{ download_key }}" {% endif %}>{{ most_recent_list.1.eventtype|default_if_none:"-" }} <i class="fa fa-chevron-right"></i> Customer ID: {{ most_recent_list.1.customerid|default_if_none:"-" }}</a>
+                                            </h2>
+                              <div class="byline">
+                                <span>{{ most_recent_list.1.date|default_if_none:"-" }} </span>
+
+                              </div>
+                              <p class="excerpt"></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="block">
+                            <div class="block_content">
+                              <h2 class="title">
+                                  <a style="font-size: 15px;" {% if  most_recent_list.2.eventid %} href="https://cdn1.gdprinsider.ovh/dpedit/?getdetails={{ most_recent_list.2.eventid|default_if_none:'' }}&dkey={{ download_key }}" {% endif %}>{{ most_recent_list.2.eventtype|default_if_none:"-" }} <i class="fa fa-chevron-right"></i> Customer ID: {{ most_recent_list.2.customerid|default_if_none:"-" }}</a>
+                                            </h2>
+                              <div class="byline">
+                                <span>{{ most_recent_list.2.date|default_if_none:"-" }} </span>
+
+                              </div>
+                              <p class="excerpt"></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="block">
+                            <div class="block_content">
+                              <h2 class="title">
+                                  <a style="font-size: 15px;" {% if  most_recent_list.3.eventid %} href="https://cdn1.gdprinsider.ovh/dpedit/?getdetails={{ most_recent_list.3.eventid|default_if_none:'' }}&dkey={{ download_key }}" {% endif %}>{{ most_recent_list.3.eventtype|default_if_none:"-" }} <i class="fa fa-chevron-right"></i> Customer ID: {{ most_recent_list.3.customerid|default_if_none:"-" }}</a>
+                                            </h2>
+                              <div class="byline">
+                                <span>{{ most_recent_list.3.date|default_if_none:"-" }} </span>
+
+                              </div>
+                              <p class="excerpt"></p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Export GDPR Audit Logs <small></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+                        
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    
+                    <form class="form-horizontal form-label-left input_mask" action="/home/" method="post">
+                      {% csrf_token %}
+                      <input type="hidden" name="submitted" value="submitted">
+                      <input type="hidden" name="dkey" value="{{ download_key }}">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Audit Log</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select id="log-type" name="exporttype" class="form-control col-md-7 col-xs-12" required onchange="setDatePickerFields()">
+                            <option value="">Choose..</option> 
+                            <option value="exportall">Export Complete GDPR Audit Log</option>
+                            <option value="exporttimeperiod">Export GDPR Audit Log For A Date Range</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Start Date </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input id="datepicker1" name="startdate" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">End Date <span></span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input id="datepicker2"  name="enddate" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Export Format </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <div id="exportformat" class="btn-group" data-toggle="buttons">
+                            
+                            <label id="label-csv" class="btn btn-default" onclick="higlightButton('label-csv')">
+                              <input id="input-csv" type="radio" name="exportformat" value="CSV"> &nbsp; CSV &nbsp;
+                            </label>
+
+                            <label id="label-pdf" class="btn btn-primary" onclick="higlightButton('label-pdf')">
+                              <input id="input-pdf" type="radio" name="exportformat" checked="checked" value="PDF"> PDF
+                            </label>
+                          
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                          <button class="btn btn-primary" type="reset">Reset</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+            </div>
+
+            </div><!-- row-->
+              
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            <a href="https://www.gdprdynamics.com">GDPR Compliance 360</a> 
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      
+{% endblock content %}
+      
+      
+        

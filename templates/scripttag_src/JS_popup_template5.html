@@ -1,0 +1,757 @@
+  
+	//Fonts/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  var linkfa = document.createElement('link');
+  linkfa.setAttribute('rel', 'stylesheet');
+	linkfa.setAttribute('type', 'text/css');
+	linkfa.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+	document.head.appendChild(linkfa);
+
+  var linkfont = document.createElement('link');
+  linkfont.setAttribute('rel', 'stylesheet');
+  linkfont.setAttribute('type', 'text/css');
+  linkfont.setAttribute('href', 'https://fonts.googleapis.com/css?family={{ font_link_name }}');
+  document.head.appendChild(linkfont);
+
+  // CSS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Create a New StyleSheet 
+  var sheet = (function() {
+    // Create the <style> tag
+    var style = document.createElement("style");
+
+    // WebKit magic
+    style.appendChild(document.createTextNode(""));
+
+    // Add the <style> element to the page
+    document.head.appendChild(style);
+
+    return style.sheet;
+  })();
+
+  // Insert Custom CSS Rules
+
+ /**********************************************************************************************************/
+/*Mobile CSS*/
+/**********************************************************************************************************/
+  sheet.insertRule("@media only screen and (max-device-width: 580px){.GDPRruzcv2wa66gdprremovebtn {background-color: {{ background_color }}; height: 30px; width: 30px; margin-left: 5px; margin-bottom: 5px; left: 0; bottom: 0; border-radius: 50%; border: 0px; position: absolute; z-index: 2147483647; cursor:pointer; position: fixed;} .GDPRruzcv2wa66gdprremovebuttonlogo{font-size: 16px !important; color: {{ text_color }}!important;} .GDPRruzcv2wa66consenttext{font-size: 14px; position: relative; padding: 15px; text-align: center;} .GDPRruzcv2wa66consenttext p{font-weight: 400;} .GDPRruzcv2wa66modal-content-datareq {padding: 2rem; width: 92%; /* Could be more or less, depending on screen size */ position: absolute; z-index: 2147483647; top: 50%; left: 50%; padding: 0px 0px 15px; background: {{ background_color }}; background-clip: padding-box; border: 1px solid #999; border: 1px solid rgba(0, 0, 0, .2); border-radius: 6px; outline: 0; -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5); box-shadow: 0 3px 9px rgba(0, 0, 0, .5); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%)} .GDPRruzcv2wa66modal-title{font-size: 14px; font-weight: 500; margin-top: 0px; margin-bottom: 0px; line-height: 1.1; padding: 0px; margin: 0px; padding: 0px; line-height: 1.42857143; text-align: center;  font-family: {% autoescape off %}{{ font_type }}{% endautoescape %};} .GDPRruzcv2wa66firstpartnersscrolltabletopline{color: {{ text_color }}; width: 100%; font-size: 14px; font-weight: 500; border-bottom: 1px solid {{ secondary_text_color }};} .GDPRruzcv2wa66partnersscrolltabletopline{color: {{ text_color }}; width: 100%; font-size: 14px; font-weight: 500; border-bottom: 1px solid {{ secondary_text_color }}; padding-top: 10px;} .GDPRruzcv2wa66consentpartners{font-size: 14px;} .GDPRruzcv2wa66partnersscrollbar{display: block; /*switch to none to hide*/ width: 90%; height: 170px; overflow-y: scroll; position: relative; margin: 10px auto; /*border: 2px solid #22437c !important;*/ border-radius: 7px;} .GDPRruzcv2wa66form-control {height: 45px; font-size: 13px;} .GDPRruzcv2wa66form-control-feedback {height: 45px;width: 35px;} .GDPRruzcv2wa66form-control.GDPRruzcv2wa66has-feedback-left {padding-left: 40px;} .GDPRruzcv2wa66button1x{font-size: 14px;} .GDPRruzcv2wa66tooltiptext {font-size: 13px; margin-bottom: 5px; margin-left: 45px;} .GDPRruzcv2wa66tooltiptext::after { content: ' '; position: absolute; top: 50%; /* At the bottom of the tooltip */ right: 100%; margin-top: -5px; border-width: 5px; border-style: solid; border-color: transparent transparent transparent transparent; } .GDPRruzcv2wa66gdprremovebtn {font-size: 14px;} .GDPRruzcv2wa66has-feedback{margin-bottom: 14px; margin-top: 30px; width: 100%; float: none;} .GDPRruzcv2wa66emailicon{margin-top: 15px; color: {{ text_color }};} .GDPRruzcv2wa66consenttext p{ color: {{ text_color }}; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 14px; font-weight: 400; line-height: 1.471;} .GDPRruzcv2wa66modal-content-datareq label {display: inline-block; margin: 0 0 -1px; padding: 15px 22px; font-weight: 600; text-align: center; color: {{ secondary_text_color }}; border: 1px solid transparent; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 14px; line-height: 1.471; }}", 0);
+
+
+
+  sheet.insertRule(".GDPRruzcv2wa66modal {display: none; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 2147483642; left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: rgb(0,0,0); /* Fallback color */ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66modal-header {padding: 15px; /*border-bottom: 1px solid #e5e5e5;*/ }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66modal-header .GDPRruzcv2wa66close {margin-top: -2px;}", 0);
+
+  sheet.insertRule("button.GDPRruzcv2wa66close {-webkit-appearance: none; padding: 0; cursor: pointer; background: 0 0; border: 0; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66close {float: right; font-size: 21px; font-weight: 700; line-height: 1; color: #000; text-shadow: 0 1px 0 {{ background_color }}; filter: alpha(opacity=20); opacity: .2; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66modal-title{ font-size: 16px; font-weight: 500; margin-top: 0px; margin-bottom: 0px; line-height: 1.1; padding: 0px; margin: 0px; padding: 0px; line-height: 1.42857143; text-align: center; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; color: {{ text_color }};}", 0);
+
+  /*Link to Request*/
+  sheet.insertRule(".GDPRruzcv2wa66gdprremovebtn {background-color: {{ background_color }}; height: 30px; width: 30px; margin-left: 5px; margin-bottom: 5px; left: 0; bottom: 0; border-radius: 50%; border: 0px; position: absolute; z-index: 2147483647; cursor:pointer; position: fixed; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66gdprremovebuttonlogo{font-size: 24px !important; color: {{ text_color }}   !important; padding-top: 4px;}", 0);
+
+  /*****************************/
+  /*TOOLTIP*/
+  /* Tooltip text */
+  sheet.insertRule(".GDPRruzcv2wa66tooltiptext {display: block; /*width: 120px;*/ background-color: {{ background_color }}; color: {{ text_color }}; text-align: center; padding: 5px 10px; border-radius: 6px; /* Position the tooltip text - see examples below! */ position: absolute; z-index: 2147483647; left: 0; bottom: 0; margin-left: 5px; margin-bottom: 45px; font-size: 13px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; position: fixed; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66tooltiptext::after {content: ' '; position: absolute; top: 100%; /* At the bottom of the tooltip */ left: 10%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: {{ background_color }} transparent transparent transparent; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66infoicon{margin-right: 5px; }", 0);
+
+  /*DATA REQUEST CSS*/
+  sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq {padding: 2rem; width: 50%; /* Could be more or less, depending on screen size */ position: absolute; z-index: 2147483647; top: 50%; left: 50%; width: 300px; padding: 0px 0px 15px; background: {{ background_color }}; background-clip: padding-box; border: 1px solid #999; border: 1px solid rgba(0, 0, 0, .2); border-radius: 6px; outline: 0; -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5); box-shadow: 0 3px 9px rgba(0, 0, 0, .5); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%) }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66consenttext{ position: relative; padding: 15px; text-align: center; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66consenttext p{ color: {{ text_color }}; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 13px; font-weight: 400; line-height: 1.471; margin: 0px; padding: 0px;}", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66requesttext{ display: block; margin-top: 10px; }", 0);
+
+  /* TABS*/
+
+  sheet.insertRule("*, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq section {display: none; padding: 20px 0 0; border-top: 1px solid {{ secondary_text_color }}; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66tabwrapper input {display: none; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq label {display: inline-block; margin: 0 0 -1px; padding: 15px 22px; font-weight: 600; text-align: center; color: {{ secondary_text_color }}; border: 1px solid transparent; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-size: 13px; line-height: 1.471; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq label:before {font-family: 'fontawesome'; font-weight: normal; margin-right: 10px; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq label[for*='1']:before { content: \'\\f1b3\'; }", 0);
+  sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq label[for*='3']:before { content: \'\\f12d\'; }", 0);
+  sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq label[for*='4']:before { content: \'\\f074\'; }", 0);
+  sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq label[for*='2']:before { content: \'\\f085\'; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq label:hover {cursor: pointer; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66modal-content-datareq input:checked + label {color: {{ active_tab_text_color }}; border: 1px solid {{ background_color }}; border-bottom: 2px solid {{ text_color }}; border-top: 2px solid {{ text_color }}; }", 0);
+
+  sheet.insertRule("#GDPRruzcv2wa66-tab1:checked ~ #GDPRruzcv2wa66-content1, #GDPRruzcv2wa66-tab2:checked ~ #GDPRruzcv2wa66-content2, #GDPRruzcv2wa66-tab3:checked ~ #GDPRruzcv2wa66-content3, #GDPRruzcv2wa66-tab4:checked ~ #GDPRruzcv2wa66-content4 {display: block; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66form-control.GDPRruzcv2wa66has-feedback-left {padding-left: 45px; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66has-feedback{margin-top: 15px; position: relative; min-height: 1px; float: left; padding-right: 10px; padding-left: 10px; width: 100%; margin-bottom: 15px; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66form-control {display: block; width: 100%; height: 34px; padding: 6px 12px; font-size: 12px; line-height: 1.4857143; color: #555; background-color: {{ background_color }}; background-image: none; border: 1px solid #ccc; border-radius: 4px; -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075); box-shadow: inset 0 1px 1px rgba(0,0,0,.075); -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s; -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66form-control-feedback {position: absolute; top: 0; right: 0; z-index: 2147483647; display: block; width: 34px; height: 34px; line-height: 34px; text-align: center; pointer-events: none; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66form-horizontal .GDPRruzcv2wa66has-feedback .GDPRruzcv2wa66form-control-feedback {right: 15px; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66form-group.GDPRruzcv2wa66has-feedback span { display: block!important; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66form-control-feedback.GDPRruzcv2wa66left {border-right: 1px solid #ccc; left: 13px; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66emailicon{margin-top: 8px;color: {{ text_color }}; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66checkemailtext{display: none; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66button1x{display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; }", 0);
+
+   
+  sheet.insertRule(".GDPRruzcv2wa66submitbtn{color: {{ background_color }}; background-color: {{ accept_color }}; border-color: {{ accept_color }};}", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66consentwrapper{text-align: center; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66partnersscrollbar{display: block; /*switch to none to hide*/ width: 90%; height: 100px; overflow-y: scroll; position: relative; margin: 10px auto; /*border: 2px solid #22437c !important;*/ border-radius: 7px; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66partnersscrolltable{width: 100%; z-index: 2147483647; text-align: left;}", 0);
+
+
+  sheet.insertRule(".GDPRruzcv2wa66partnerstabletdstyle{border: 0px solid; padding: 0px;}", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66firstpartnersscrolltabletopline{color: {{ text_color }}; width: 100%; font-size: 13px; font-weight: 500; border-left: 0px solid; border-right: 0px solid; border-top: 0px solid; border-bottom: 1px solid {{ secondary_text_color }}; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; padding: 0px; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66partnersscrolltabletopline{color: {{ text_color }}; width: 100%; font-size: 13px; font-weight: 500; border-left: 0px solid; border-right: 0px solid; border-top: 0px solid; border-bottom: 1px solid {{ secondary_text_color }}; padding-bottom: 0px; padding-right: 0px; padding-left: 0px; padding-top: 10px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; }", 0);
+
+  sheet.insertRule(".GDPRruzcv2wa66consentpartners{font-size: 13px; font-family: {% autoescape off %}{{ font_type }}{% endautoescape %}; font-weight: 400; color: {{ text_color }};}", 0);
+
+  /* width */
+  sheet.insertRule("#GDPRruzcv2wa66-partnersscrolllist::-webkit-scrollbar {width: 10px; z-index: 2147483647; }", 0);
+
+  /* Track */
+  sheet.insertRule("#GDPRruzcv2wa66-partnersscrolllist::-webkit-scrollbar-track {/* background: #f1f1f1; */}", 0);
+   
+  /* Handle */
+  sheet.insertRule("#GDPRruzcv2wa66-partnersscrolllist::-webkit-scrollbar-thumb {background: {{ text_color }}; border-radius: 10px; }", 0);
+
+  /* Handle on hover */
+  sheet.insertRule("#GDPRruzcv2wa66-partnersscrolllist::-webkit-scrollbar-thumb:hover {background: #555; }", 0);
+
+  
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  function browserspecificCSS() { 
+     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
+      {
+        //
+      }
+    else if(navigator.userAgent.indexOf("Chrome") != -1 )
+      {
+        sheet.insertRule(".GDPRruzcv2wa66submittext:focus::-webkit-input-placeholder {color:transparent;}", 0);
+      }
+    else if(navigator.userAgent.indexOf("Safari") != -1)
+      {
+        sheet.insertRule(".GDPRruzcv2wa66submittext:focus::-webkit-input-placeholder {color:transparent;}", 0);
+      }
+    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+      {
+        sheet.insertRule(".GDPRruzcv2wa66submittext:focus::-moz-placeholder {color:transparent;}", 0);
+        sheet.insertRule(".GDPRruzcv2wa66submittext:-moz-placeholder {color:transparent;}", 0);
+      }
+    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+      {
+        sheet.insertRule(".GDPRruzcv2wa66submittext:focus:-ms-input-placeholder { color:transparent; }", 0);
+      }  
+    else 
+      {
+       
+      }
+  }
+
+  // One way only does not wait for a response
+  function postxhml(data, url){
+  	var xhr = new XMLHttpRequest();
+  	xhr.open("POST", url, true);
+  	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+  	xhr.send(data);
+  }
+
+  function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  //Async XMLrequest with timeout promise resolve
+  function gettext(url) {
+      return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+          resolve('No Text'); // What to return if not resolved After 3 seconds,(display ENG Consent Form)
+        }, 600000); //miliseconds (currently 1min, meaning that my code will execute max 1min after pageload)
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+          resolve(this.responseText);
+        };
+        xhr.onerror = reject;
+        xhr.open('GET', url);
+        xhr.send();
+      });
+    }
+
+  function createmodals(store_name, consent_line1, consent_line2, consent_line3a, consent_line3b, consent_line3c, consent_line3d, consent_line3e, consent_line4a, consent_line4b, consent_line5, consent_line6, consent_line7, datareq_line1, datareq_line2, datareq_line3, datareq_line4, datareq_line5, datareq_line6, partners_line1, partners_line2, partners_line3, text_button_decline, text_button_wrongrequest, text_button_submit, tabtitle1, tabtitle2, tabtitle3, tabtitle4) {
+    // Create CONSENT-PUPUP Modal elements ////////////////////////////////////////////////////////////////////////////////////////
+
+    var myModaldiv = document.createElement("div");
+    myModaldiv.setAttribute("id", "GDPRruzcv2wa66-data-request-modal");
+    myModaldiv.setAttribute("class", "GDPRruzcv2wa66modal");
+
+    var ModalContent = document.createElement("div");
+    ModalContent.setAttribute("class", "GDPRruzcv2wa66modal-content-datareq");
+
+    var ModalHeader = document.createElement("div");
+    ModalHeader.setAttribute("class", "GDPRruzcv2wa66modal-header");
+
+    var CloseButton = document.createElement("button");
+    CloseButton.setAttribute("class", "GDPRruzcv2wa66close");
+    CloseButton.setAttribute("id", "GDPRruzcv2wa66-close-data-request-modal");
+
+
+    var Xspan = document.createElement("span");
+    Xspan.innerHTML = "×";
+
+    CloseButton.appendChild(Xspan);
+
+    var TitleLine = document.createElement("p");
+    TitleLine.setAttribute("class", "GDPRruzcv2wa66modal-title");          
+    TitleLine.setAttribute("id", "GDPRruzcv2wa66-myModalLabel2");
+    TitleLine.innerHTML = consent_line1;
+
+    ModalHeader.appendChild(CloseButton);
+    ModalHeader.appendChild(TitleLine);
+    ModalContent.appendChild(ModalHeader);
+
+    var ModalBody = document.createElement("div");
+    ModalBody.setAttribute("class", "GDPRruzcv2wa66consenttext");
+
+    var TabTitle = document.createElement("input");
+    TabTitle.setAttribute("id", "GDPRruzcv2wa66-tab1");
+    TabTitle.setAttribute("type", "radio");
+    TabTitle.setAttribute("name", "tabs");
+    TabTitle.style.display = "none";
+    TabTitle.checked = true;
+
+    var TabTitleLabel = document.createElement("label");
+    TabTitleLabel.setAttribute("for", "GDPRruzcv2wa66-tab1");
+    TabTitleLabel.innerHTML = tabtitle1;
+
+    ModalBody.appendChild(TabTitle);
+    ModalBody.appendChild(TabTitleLabel);
+
+    var TabTitle = document.createElement("input");
+    TabTitle.setAttribute("id", "GDPRruzcv2wa66-tab4");
+    TabTitle.setAttribute("type", "radio");
+    TabTitle.setAttribute("name", "tabs");
+    TabTitle.style.display = "none";
+
+    var TabTitleLabel = document.createElement("label");
+    TabTitleLabel.setAttribute("for", "GDPRruzcv2wa66-tab4");
+    TabTitleLabel.innerHTML = tabtitle2;
+
+    ModalBody.appendChild(TabTitle);
+    ModalBody.appendChild(TabTitleLabel);
+
+    var TabTitle = document.createElement("input");
+    TabTitle.setAttribute("id", "GDPRruzcv2wa66-tab2");
+    TabTitle.setAttribute("type", "radio");
+    TabTitle.setAttribute("name", "tabs");
+    TabTitle.style.display = "none";
+
+
+    var TabTitleLabel = document.createElement("label");
+    TabTitleLabel.setAttribute("for", "GDPRruzcv2wa66-tab2");
+    TabTitleLabel.innerHTML = tabtitle3;
+
+    ModalBody.appendChild(TabTitle);
+    ModalBody.appendChild(TabTitleLabel);
+
+    var TabTitle = document.createElement("input");
+    TabTitle.setAttribute("id", "GDPRruzcv2wa66-tab3");
+    TabTitle.setAttribute("type", "radio");
+    TabTitle.setAttribute("name", "tabs");
+    TabTitle.style.display = "none";
+
+
+    var TabTitleLabel = document.createElement("label");
+    TabTitleLabel.setAttribute("for", "GDPRruzcv2wa66-tab3");
+    TabTitleLabel.innerHTML = tabtitle4;
+
+    ModalBody.appendChild(TabTitle);
+    ModalBody.appendChild(TabTitleLabel);
+
+    /*SECTION1*/
+    var TabContent = document.createElement("section");
+    TabContent.setAttribute("id", "GDPRruzcv2wa66-content1");
+    
+    var p1 = document.createElement("p");
+    p1.innerHTML = consent_line2 + ' ' + store_name;
+
+    var p2 = document.createElement("p");
+    p2.innerHTML = consent_line3a + ' ' + consent_line3b + ' ' + consent_line3c + ' ' + consent_line3d + ' ' + consent_line3e;
+
+    var p3 = document.createElement("p");
+    p3.innerHTML = consent_line4a;
+
+    TabContent.appendChild(p1);
+    TabContent.appendChild(p2);
+    TabContent.appendChild(p3);
+    ModalBody.appendChild(TabContent);
+
+
+    /*SECTION2*/
+    var TabContent = document.createElement("section");
+    TabContent.setAttribute("id", "GDPRruzcv2wa66-content2");
+
+    var TabContentWrapper = document.createElement("div");
+    TabContentWrapper.setAttribute("class", "GDPRruzcv2wa66requesttext");
+    TabContentWrapper.setAttribute("id", "GDPRruzcv2wa66-datareqtextACCESS");
+
+    var p1 = document.createElement("p");
+    p1.innerHTML = datareq_line3;
+
+    TabContentWrapper.appendChild(p1);
+
+    var TabContentInputWrapper = document.createElement("div");
+    TabContentInputWrapper.setAttribute("class", "GDPRruzcv2wa66has-feedback");
+
+    var emailInput =  document.createElement("input");
+    emailInput.setAttribute("id", "GDPRruzcv2wa66-emailaddressACCESS");
+    emailInput.setAttribute("type", "email");
+    emailInput.setAttribute("class", "GDPRruzcv2wa66form-control GDPRruzcv2wa66has-feedback-left");
+    emailInput.placeholder = datareq_line5;
+
+    var emailSpan = document.createElement("span");
+    emailSpan.setAttribute("class", "GDPRruzcv2wa66form-control-feedback GDPRruzcv2wa66left");
+
+    var emailIcon = document.createElement("i");
+    emailIcon.setAttribute("class", "fa fa-envelope GDPRruzcv2wa66emailicon");
+
+    emailSpan.appendChild(emailIcon);
+    TabContentInputWrapper.appendChild(emailInput);
+    TabContentInputWrapper.appendChild(emailSpan);
+    TabContentWrapper.appendChild(TabContentInputWrapper);
+
+    var CheckEmailWrapper = document.createElement("div");
+    CheckEmailWrapper.setAttribute("class", "GDPRruzcv2wa66checkemailtext");
+    CheckEmailWrapper.setAttribute("id", "GDPRruzcv2wa66-checkemail-idACCESS");
+
+    var CheckEmailText = document.createElement("p");
+    CheckEmailText.innerHTML = text_button_submit;
+
+    CheckEmailWrapper.appendChild(CheckEmailText);
+
+    var SubmitButtonWrapper = document.createElement("div");
+    SubmitButtonWrapper.setAttribute("class", "GDPRruzcv2wa66consentwrapper");
+
+    var SubmitButton = document.createElement("button");
+    SubmitButton.setAttribute("class", "GDPRruzcv2wa66button1x GDPRruzcv2wa66submitbtn");
+    SubmitButton.setAttribute("id", "GDPRruzcv2wa66-submitbtnACCESS");
+    SubmitButton.setAttribute("type", "button");
+    SubmitButton.innerHTML = datareq_line6;
+
+    SubmitButtonWrapper.appendChild(SubmitButton);
+
+    TabContent.appendChild(TabContentWrapper);
+    TabContent.appendChild(CheckEmailWrapper);
+    TabContent.appendChild(SubmitButtonWrapper);
+    ModalBody.appendChild(TabContent);
+
+
+    /*SECTION3*/
+    var TabContent = document.createElement("section");
+    TabContent.setAttribute("id", "GDPRruzcv2wa66-content3");
+
+    var TabContentWrapper = document.createElement("div");
+    TabContentWrapper.setAttribute("class", "GDPRruzcv2wa66requesttext");
+    TabContentWrapper.setAttribute("id", "GDPRruzcv2wa66-datareqtextREMOVAL");
+
+    var p1 = document.createElement("p");
+    p1.innerHTML = datareq_line4;
+
+    TabContentWrapper.appendChild(p1);
+
+    var TabContentInputWrapper = document.createElement("div");
+    TabContentInputWrapper.setAttribute("class", "GDPRruzcv2wa66has-feedback");
+
+    var emailInput =  document.createElement("input");
+    emailInput.setAttribute("id", "GDPRruzcv2wa66-emailaddressREMOVAL");
+    emailInput.setAttribute("type", "email");
+    emailInput.setAttribute("class", "GDPRruzcv2wa66form-control GDPRruzcv2wa66has-feedback-left");
+    emailInput.placeholder = datareq_line5;
+
+    var emailSpan = document.createElement("span");
+    emailSpan.setAttribute("class", "GDPRruzcv2wa66form-control-feedback GDPRruzcv2wa66left");
+
+    var emailIcon = document.createElement("i");
+    emailIcon.setAttribute("class", "fa fa-envelope GDPRruzcv2wa66emailicon");
+
+    emailSpan.appendChild(emailIcon);
+    TabContentInputWrapper.appendChild(emailInput);
+    TabContentInputWrapper.appendChild(emailSpan);
+    TabContentWrapper.appendChild(TabContentInputWrapper);
+
+    var CheckEmailWrapper = document.createElement("div");
+    CheckEmailWrapper.setAttribute("class", "GDPRruzcv2wa66checkemailtext");
+    CheckEmailWrapper.setAttribute("id", "GDPRruzcv2wa66-checkemail-idREMOVAL");
+
+    var CheckEmailText = document.createElement("p");
+    CheckEmailText.innerHTML = text_button_submit;
+
+    CheckEmailWrapper.appendChild(CheckEmailText);
+
+    var SubmitButtonWrapper = document.createElement("div");
+    SubmitButtonWrapper.setAttribute("class", "GDPRruzcv2wa66consentwrapper");
+
+    var SubmitButton = document.createElement("button");
+    SubmitButton.setAttribute("class", "GDPRruzcv2wa66button1x GDPRruzcv2wa66submitbtn");
+    SubmitButton.setAttribute("id", "GDPRruzcv2wa66-submitbtnREMOVAL");
+    SubmitButton.setAttribute("type", "button");
+    SubmitButton.innerHTML = datareq_line6;
+
+    SubmitButtonWrapper.appendChild(SubmitButton);
+
+    TabContent.appendChild(TabContentWrapper);
+    TabContent.appendChild(CheckEmailWrapper);
+    TabContent.appendChild(SubmitButtonWrapper);
+    ModalBody.appendChild(TabContent);
+
+
+    /*SECTION 4*/
+    var TabContent = document.createElement("section");
+    TabContent.setAttribute("id", "GDPRruzcv2wa66-content4");
+
+    var TabContentWrapper = document.createElement("div");
+    TabContentWrapper.setAttribute("class", "GDPRruzcv2wa66requesttext");
+
+    var PartnersWrapper = document.createElement("div");
+    PartnersWrapper.setAttribute("class", "GDPRruzcv2wa66partnersscrollbar");
+    PartnersWrapper.setAttribute("id", "GDPRruzcv2wa66-partnersscrolllist");
+
+    var PartnersTable = document.createElement("table");
+    PartnersTable.setAttribute("class", "GDPRruzcv2wa66partnersscrolltable");
+
+    /*PARTNERS SECTION*/
+    var rowTitle2 =  document.createElement("tr");
+    var cellTitle2 = document.createElement("td");
+    cellTitle2.setAttribute("class", "GDPRruzcv2wa66firstpartnersscrolltabletopline");
+    cellTitle2.colSpan = "2";
+    cellTitle2.innerHTML = partners_line3;
+
+    rowTitle2.appendChild(cellTitle2);
+    PartnersTable.appendChild(rowTitle2);
+
+    //known partners
+    /* START Django Loop*/
+    {% for partnername, partnerlink in  partners_dict.items %}
+    var rowContent2 =  document.createElement("tr");
+    var cellContent2 = document.createElement("td");
+    cellContent2.setAttribute("class", "GDPRruzcv2wa66partnerstabletdstyle");
+    var cellContent2Inner = document.createElement("div");
+    cellContent2Inner.setAttribute("class", "GDPRruzcv2wa66consentpartners");
+    cellContent2Inner.colSpan = "2";
+    cellContent2Inner.innerHTML = "{{ partnername }}";
+
+    cellContent2.appendChild(cellContent2Inner)
+    rowContent2.appendChild(cellContent2);
+    PartnersTable.appendChild(rowContent2);
+    {% endfor %}
+    /* End Django Loop*/
+
+    //Unknown partners (Shipping)
+    /* START Django Loop*/
+    {% for partnername in  unknownpartners_list %}
+    var rowContent2 =  document.createElement("tr");
+    var cellContent2 = document.createElement("td");
+    cellContent2.setAttribute("class", "GDPRruzcv2wa66partnerstabletdstyle");
+    var cellContent2Inner = document.createElement("div");
+    cellContent2Inner.setAttribute("class", "GDPRruzcv2wa66consentpartners");
+    cellContent2Inner.colSpan = "2";
+    cellContent2Inner.innerHTML = "{{ partnername }}";
+
+    cellContent2.appendChild(cellContent2Inner)
+    rowContent2.appendChild(cellContent2);
+    PartnersTable.appendChild(rowContent2);
+    {% endfor %}
+
+    //Custom Unknown partners (Marketing)
+    /* START Django Loop*/
+    {% for partnername in  unknownmarketing_list %}
+    var rowContent2 =  document.createElement("tr");
+    var cellContent2 = document.createElement("td");
+    cellContent2.setAttribute("class", "GDPRruzcv2wa66partnerstabletdstyle");
+    var cellContent2Inner = document.createElement("div");
+    cellContent2Inner.setAttribute("class", "GDPRruzcv2wa66consentpartners");
+    cellContent2Inner.colSpan = "2";
+    cellContent2Inner.innerHTML = "{{ partnername }}";
+
+    cellContent2.appendChild(cellContent2Inner)
+    rowContent2.appendChild(cellContent2);
+    PartnersTable.appendChild(rowContent2);
+    {% endfor %}
+
+
+    /*DATA TRANSFER*/
+    var rowTitle2 =  document.createElement("tr");
+    var cellTitle2 = document.createElement("td");
+    cellTitle2.setAttribute("class", "GDPRruzcv2wa66partnersscrolltabletopline");
+    cellTitle2.colSpan = "2";
+    cellTitle2.innerHTML = partners_line2;
+
+    rowTitle2.appendChild(cellTitle2);
+    PartnersTable.appendChild(rowTitle2);
+
+    /* START Django Loop*/
+    var rowContent2 =  document.createElement("tr");
+    var cellContent2 = document.createElement("td");
+    cellContent2.setAttribute("class", "GDPRruzcv2wa66partnerstabletdstyle");
+    var cellContent2Inner = document.createElement("div");
+    cellContent2Inner.setAttribute("class", "GDPRruzcv2wa66consentpartners");
+    cellContent2Inner.colSpan = "2";
+    cellContent2Inner.innerHTML = "{{ third_country }}";
+
+    cellContent2.appendChild(cellContent2Inner)
+    rowContent2.appendChild(cellContent2);
+    PartnersTable.appendChild(rowContent2);
+    /* End Django Loop*/
+
+
+
+    PartnersWrapper.appendChild(PartnersTable);
+    TabContentWrapper.appendChild(PartnersWrapper);
+    TabContent.appendChild(TabContentWrapper);
+    ModalBody.appendChild(TabContent);
+    ModalContent.appendChild(ModalBody);
+
+
+    myModaldiv.appendChild(ModalContent);
+
+    document.body.appendChild(myModaldiv);
+
+    /* GDPR Removal Link Button */
+    var gdprremovalbuttonWrapper = document.createElement("div");
+    gdprremovalbuttonWrapper.setAttribute("class", "GDPRruzcv2wa66gdprremovewrapper");
+
+    var gdprremovalbutton = document.createElement("button");
+    gdprremovalbutton.setAttribute("class", "GDPRruzcv2wa66gdprremovebtn");
+    gdprremovalbutton.setAttribute("id", "GDPRruzcv2wa66-gdprremove");
+    // New event listener to replace "onclick"
+    gdprremovalbutton.addEventListener('click', function(){
+                  //console.log("in remove click");
+                  var datamodal = document.getElementById('GDPRruzcv2wa66-data-request-modal');
+                  datamodal.style.display = "block";
+                });
+
+    var gdpricon = document.createElement("i");
+    gdpricon.setAttribute("class", "fa fa-shield GDPRruzcv2wa66gdprremovebuttonlogo");
+
+    gdprremovalbutton.appendChild(gdpricon);
+
+    var tooltipspan = document.createElement("span");
+    tooltipspan.setAttribute("class", "GDPRruzcv2wa66tooltiptext");
+    tooltipspan.setAttribute("id", "GDPRruzcv2wa66-tooltiptext");
+    tooltipspan.innerHTML = '<i class="fa fa-info-circle GDPRruzcv2wa66infoicon"></i>' + consent_line1;
+
+    gdprremovalbuttonWrapper.appendChild(gdprremovalbutton);
+    gdprremovalbuttonWrapper.appendChild(tooltipspan);
+
+    document.body.appendChild(gdprremovalbuttonWrapper);
+    
+
+  }
+  
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////
+  ////////////// PAGE LOAD SWITCH BOARD //////////////
+  ///////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+	//window.onload = function() {
+		//console.log('start')
+   
+
+    // STEP0: Inject Browser Specific CSS styles
+    browserspecificCSS();
+
+    // STEP1: 
+     // Later This needs to shift to be in the .then() statement so we can pass webserver args  
+
+  	// STEP2: Request IPCHECK endpoint
+    gettext("https://cdn1.gdprinsider.ovh/ipcheck/?shop={{ shop_url }}") //REPLACE WITH URL TO 'IPCHECK' endpoint
+        //.then is a reference to the future. The result variable will be returned whenever a response is 
+        // recieved from the webserver response comes in which depends upon bandwidth and internet speed
+        // Once the webserver responds to IPCHECK request, the code between the .then() will be executed
+
+        .then(function(result) {  // Results will be returned in result variable
+          // data recived from webserver is string, transfom it to JSON to access individual elements
+          var dialoguetext = JSON.parse(result); 
+          //Now that its transformed to a JavaScrippt Object you can access items as class attributes
+          // ex.
+          //console.log(dialoguetext.eu_flag)
+
+          //STEP3: Check Cookie and EU_FLAG
+          var gdprcookie = getCookie("GDPRCOMPLIANCE360");
+          //var gdprcookie = null;
+            
+            // if gdprcookie is null (variable is empty) and EU_FLAG == TRUE then make modal appear
+            if (dialoguetext.eu_flag=='True') {
+              
+              //Create modal overlay items using "dialoguetext" obtained from webserver
+              createmodals(dialoguetext.store_name, dialoguetext.consent_line1, dialoguetext.consent_line2, dialoguetext.consent_line3a, dialoguetext.consent_line3b, dialoguetext.consent_line3c, dialoguetext.consent_line3d, dialoguetext.consent_line3e, dialoguetext.consent_line4a, dialoguetext.consent_line4b,  dialoguetext.consent_line5, dialoguetext.consent_line6, dialoguetext.consent_line7, dialoguetext.datareq_line1, dialoguetext.datareq_line2, dialoguetext.datareq_line3, dialoguetext.datareq_line4, dialoguetext.datareq_line5, dialoguetext.datareq_line6, dialoguetext.partners_line1, dialoguetext.partners_line2, dialoguetext.partners_line3, dialoguetext.button_decline, dialoguetext.button_wrongrequest, dialoguetext.button_submit, dialoguetext.tabtitle1, dialoguetext.tabtitle2, dialoguetext.tabtitle3, dialoguetext.tabtitle4);
+
+              // Change "View Details" text to language translation GDPRruzcv2wa66button2x
+              var view_detail_anchors = document.getElementsByClassName("GDPRruzcv2wa66button2x");
+              var i;
+              for (i = 0; i < view_detail_anchors.length; i++) {
+                  view_detail_anchors[i].innerHTML= dialoguetext.consent_line5;
+              }
+
+              // Get all items needed from elements that were created after page-load in createmodals() function above
+              //var consent_popup = document.getElementById('GDPRruzcv2wa66consent-request-modal');
+              //var acceptbtn = document.getElementById("GDPRruzcv2wa66-accept-btn");
+              //var declinebtn = document.getElementById("GDPRruzcv2wa66-decline-btn");
+              //var consent_text = document.getElementById("GDPRruzcv2wa66-consenttext-id");
+              //var decline_text = document.getElementById("GDPRruzcv2wa66-decline-id");
+              //var wrong_request = document.getElementById("GDPRruzcv2wa66-wrongreq-id");
+              var check_emailACCESS = document.getElementById("GDPRruzcv2wa66-checkemail-idACCESS");
+              var check_emailREMOVAL = document.getElementById("GDPRruzcv2wa66-checkemail-idREMOVAL");
+              var gdprremove = document.getElementById("GDPRruzcv2wa66-gdprremove");
+              //var partnerslist = document.getElementById("GDPRruzcv2wa66-partnersscrolllist");
+              //var partnerslink = document.getElementById("GDPRruzcv2wa66-displaypartners");
+              //var learnmorelink = document.getElementById("GDPRruzcv2wa66-learnmore");
+              var datamodal = document.getElementById('GDPRruzcv2wa66-data-request-modal');
+              var datamodalclose = document.getElementById("GDPRruzcv2wa66-close-data-request-modal");
+              var datasubmitbtnACCESS = document.getElementById("GDPRruzcv2wa66-submitbtnACCESS");
+              var datasubmitbtnREMOVAL = document.getElementById("GDPRruzcv2wa66-submitbtnREMOVAL");
+              var datareqtextREMOVAL = document.getElementById("GDPRruzcv2wa66-datareqtextREMOVAL");
+              var datareqtextACCESS = document.getElementById("GDPRruzcv2wa66-datareqtextACCESS");
+              var tooltip = document.getElementById("GDPRruzcv2wa66-tooltiptext");
+
+              // Check for Cookie to display the tooltip or not
+              if (gdprcookie === null){
+                 //console.log("cookie null")
+								 tooltip.style.display = "block";
+                 setCookie("GDPRCOMPLIANCE360", "consented", 365); // Call cookie dropping function above
+              }else{
+                //console.log("cookie not null")
+								tooltip.style.display = "none";
+              }	
+  
+              // Handler for accept button
+              //acceptbtn.onclick = function() {
+              //  consent_popup.style.display = "none";
+              //  var d = new Date();
+              //  var n = d.toString(); // convert date object into string
+              //  postdata = "requesttype=consentaccept&shopurl={{ shop_url }}&userhash=" + n;
+              //  postxhml(postdata, "https://cdn1.gdprinsider.ovh/dataevent/"); // POST that user accepted
+              //  setCookie("GDPRruzcv2wa66SudbWOBs7ArjzO3m1D", n, 365); // Call cookie dropping function above
+              //};
+
+              // Handler for decline button
+              //declinebtn.onclick = function() {
+                //decline_text.style.display = "block";
+                //};
+
+              // Handler for Parnters link
+              //partnerslink.onclick = function() {
+                //partnerslist.style.display = "block";
+              //};
+
+              // Handler for LearnMore link
+              //learnmorelink.onclick = function() {
+                //partnerslist.style.display = "block";
+              //};
+            
+              // Handler for GDPR Data Request Icon ()
+              //gdprremove.onclick = function() {
+              //  consent_popup.style.display = "none";
+              //  datamodal.style.display = "block";
+              //};
+
+              // Handler for (x) close button in GDPR Data Request Modal
+              datamodalclose.onclick = function() {
+                datamodal.style.display = "none";
+                tooltip.style.display = "none";
+              };
+
+              //Handler for GDPR REMOVAL Data Request Submit Button
+              datasubmitbtnREMOVAL.onclick = function() {
+                var email_address = document.getElementById("GDPRruzcv2wa66-emailaddressREMOVAL").value;
+                
+                var data = "requesttype=reqdel&shopurl={{ shop_url }}&country=";
+                data = data + dialoguetext.country;
+                data = data + "&email=";
+                data = data + email_address;
+                  
+                //console.log(data);     
+                postxhml(data, "https://cdn1.gdprinsider.ovh/dataevent/"); // POST user request for processing
+                datareqtextREMOVAL.style.display = "none";
+                datasubmitbtnREMOVAL.style.display = "none";
+                check_emailREMOVAL.style.display = "block";  
+              };
+
+
+              //Handler for GDPR ACCESS Data Request Submit Button
+              datasubmitbtnACCESS.onclick = function() {
+                var email_address = document.getElementById("GDPRruzcv2wa66-emailaddressACCESS").value;
+            
+                var data = "requesttype=reqcopy&shopurl={{ shop_url }}&country=";
+                data = data + dialoguetext.country
+                data = data + "&email=";
+                data = data + email_address;
+                
+                //console.log(data);
+                postxhml(data, "https://cdn1.gdprinsider.ovh/dataevent/"); // POST user request for processing
+                datareqtextACCESS.style.display = "none";
+                datasubmitbtnACCESS.style.display = "none";
+                check_emailACCESS.style.display = "block";
+              };
+            
+
+            } 
+
+            else if (dialoguetext.eu_flag=='False') { //else if user is not in EU  
+              return;
+            }
+
+            else { // if gdprcookie is not a null variable (if it contains something) a.k.a user accepted
+              //console.log(gdprcookie)
+              consent_popup.style.display = "none"; // Then switch modal.style.display to NONE (a.k.a don't display)
+          }
+        })
+				
+				.catch(function(error) {
+          console.log(error);
+        }); 
+  
+		//console.log('end')
+  //};
+  
+

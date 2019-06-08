@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>FAQ | GDPR Compliance 360</title>
+
+    <!-- Bootstrap 3.3.7-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Custom Theme Style -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/custom.css' %}">
+
+    <!-- Embedded Shopify App (initlaize the EASDK to make This script detects if your app was loaded inside an iframe. If not, it will create a redirection back into the relative embedded URL in the Shopify admin. -->
+    {% include "dashboard/EASDK_InitializeJS.html" %}
+  </head>
+
+  <body class="nav-sm">
+
+    <!--{% load static %}
+    <div>
+    <img src="{% static 'images/app_icon.png' %}">
+    GDPR Compliance 360
+    </div>-->
+    {% include "dashboard/EASDK_TopBar.html" %}
+    <div class="container body">
+      <div class="main_container">
+        {% include "dashboard/menu.html" %}
+
+        {% block content %}
+        {% endblock content %}
+
+      </div>
+
+    </div>
+
+    
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    {% include "dashboard/homescripts.html" %}
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+    <!-- bootstrap-progressbar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src={% static 'stylesheets/custom.min.js' %}></script>
+  
+  </body>
+</html>

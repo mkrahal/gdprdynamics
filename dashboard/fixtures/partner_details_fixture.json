@@ -1,0 +1,147 @@
+[
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 1,
+    "fields": {
+      "service_lookup_var": "shopify", 
+      "service_name": "Shopify",
+      "service_link": "https://www.shopify.com/contact"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 2,
+    "fields": {
+      "service_lookup_var": "gdpr", 
+      "service_name": "GDPR Compliance 360 APP",
+      "service_link": "http://www.gdprdynamics.com/contact"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 3,
+    "fields": {
+      "service_lookup_var": "mailchimp", 
+      "service_name": "MailChimp",
+      "service_link": "https://mailchimp.com/contact/"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 4,
+    "fields": {
+      "service_lookup_var": "aweber", 
+      "service_name": "AWeber",
+      "service_link": "https://www.aweber.com/contact-us.htm"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 5,
+    "fields": {
+      "service_lookup_var": "cb-google", 
+      "service_name": "Google Ads",
+      "service_link": "https://www.google.com/contact/"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 6,
+    "fields": {
+      "service_lookup_var": "cb-facebook", 
+      "service_name": "Facebook Ads",
+      "service_link": "https://www.facebook.com/help/"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 7,
+    "fields": {
+      "service_lookup_var": "cb-instagram", 
+      "service_name": "Instagram Ads",
+      "service_link": "https://help.instagram.com/"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 8,
+    "fields": {
+      "service_lookup_var": "cb-youtube", 
+      "service_name": "YouTube Ads",
+      "service_link": "https://www.youtube.com/t/contact_us"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 9,
+    "fields": {
+      "service_lookup_var": "cb-twitter", 
+      "service_name": "Twitter Ads",
+      "service_link": "https://help.twitter.com/en/contact-us"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 10,
+    "fields": {
+      "service_lookup_var": "cb-amazon", 
+      "service_name": "Amazon Ads",
+      "service_link": "https://www.amazon.com/help"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 11,
+    "fields": {
+      "service_lookup_var": "cb-bing", 
+      "service_name": "Bing Ads",
+      "service_link": "https://advertise.bingads.microsoft.com/en-us/bing-ads-support"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 12,
+    "fields": {
+      "service_lookup_var": "cb-yahoo", 
+      "service_name": "Yahoo Ads",
+      "service_link": "https://advertising.yahoo.com/contact"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 13,
+    "fields": {
+      "service_lookup_var": "cb-leadbolt", 
+      "service_name": "LeadBolt Ads",
+      "service_link": "https://www.leadbolt.com/contact/"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 14,
+    "fields": {
+      "service_lookup_var": "cb-inmobi", 
+      "service_name": "InMobi",
+      "service_link": "https://www.inmobi.com/company/contact/"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 15,
+    "fields": {
+      "service_lookup_var": "cb-mopub", 
+      "service_name": "MoPub Ads",
+      "service_link": "https://www.mopub.com/contact/"
+    }
+  },
+  {
+    "model": "dashboard.KnownPartnersServiceDetails",
+    "pk": 16,
+    "fields": {
+      "service_lookup_var": "cb-adroll", 
+      "service_name": "AdRoll Ads",
+      "service_link": "https://help.adroll.com/hc/en-us"
+    }
+  }
+]
+

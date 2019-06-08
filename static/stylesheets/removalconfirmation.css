@@ -1,0 +1,163 @@
+body,
+html {
+  background: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: 300;
+  margin: 60px 0 30px 0;
+  color: #fff;
+}
+
+/* The Modal (background) */
+.modal {
+
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9998;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+.consentwrapper{
+  margin-top: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.consenttext{
+  font-family: 'Roboto' !important;
+  font-size: 15px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  /*border: 2px solid #22437c !important;
+  border-radius: 7px;*/
+  color: #2A3F54;
+}
+
+.consenttitle{
+  font-family: 'Roboto' important;
+  color: #2A3F54;
+}
+
+/*DATA REQUEST CSS*/
+.modal-content-datareq {
+  padding: 2rem;
+  width: 50%; /* Could be more or less, depending on screen size */
+  max-width: 440px;
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  padding: 0px 20px 15px;
+  border: 2px solid #2A3F54 !important;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%)
+}
+
+.consentsubtitle{
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 17px;
+  font-weight: 700;
+  color: #2A3F54;
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+
+
+
+/*Hide Placeholder text when user clicks on the <input> box (easier to see) */
+.submittext:focus::-webkit-input-placeholder {color:transparent;}
+.submittext:focus::-moz-placeholder {color:transparent;}
+.submittext:-moz-placeholder {color:transparent;}
+
+/* END OF DATAREQUEST CSS*/
+
+
+
+/**********************************************************************************************************/
+/*Mobile CSS*/
+/**********************************************************************************************************/
+
+@media only screen and (max-device-width: 580px){
+
+
+  .consenttext{
+  font-family: 'Roboto' !important;
+  font-size: 35px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  /*border: 2px solid #2A3F54 !important;
+  border-radius: 7px;*/
+  color: #2A3F54;
+  }
+
+  .consenttitle{
+    font-size: 45px;
+    font-family: 'Roboto' !important;
+    font-weight: 700;
+    color: #2A3F54;
+  }
+
+
+  /*DATA REQUEST CSS*/
+  .modal-content-datareq {
+    /*margin: 15% auto; 15% from the top and centered */
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 92%; /* Could be more or less, depending on screen size */
+    max-width: 100vh;
+    max-height: 100vh;
+    position: absolute;
+    z-index: 9999;
+    padding: 0px 20px 15px;
+    /*border: 2px solid #2A3F54 !important;*/
+    border-radius: 0.25rem;
+    background: #fff;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%)
+  }
+
+  .consentsubtitle{
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 40px;
+    font-weight: 700;
+    color: #2A3F54;
+    padding-left: 7px;
+    padding-bottom: 15px;
+  }
+  /*Hide Placeholder text when user clicks on the <input> box (easier to see in mobile) */
+  .submittext:focus::-webkit-input-placeholder {color:transparent;}
+  .submittext:focus::-moz-placeholder {color:transparent;}
+  .submittext:-moz-placeholder {color:transparent;}
+
+  /*END OF DATA REQUEST CSS */
+}
+
+

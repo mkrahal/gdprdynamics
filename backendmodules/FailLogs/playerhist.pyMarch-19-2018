@@ -1,0 +1,9 @@
+FAILED TO EXECUTE SQL QUERY 
+
+CREATE TABLE tesddevstore.myshopify.com_log (event_id VARCHAR(300), date  DATETIME, action VARCHAR(100) DEFAULT '-', method VARCHAR(300) DEFAULT '-', referringpage VARCHAR(300) DEFAULT '-', comment VARCHAR(300) DEFAULT '-');
+FAILED TO EXECUTE SQL QUERY 
+
+CREATE TABLE tesddevstore.myshopify.com_log (event_id VARCHAR(300), date  DATETIME, action VARCHAR(100) DEFAULT '-', method VARCHAR(300) DEFAULT '-', referringpage VARCHAR(300) DEFAULT '-', comment VARCHAR(300) DEFAULT '-');
+FAILED TO EXECUTE SQL QUERY 
+
+CREATE TABLE tesddevstore.myshopify.com (event_id VARCHAR(300), date  DATETIME, action VARCHAR(100) DEFAULT '-', method VARCHAR(300) DEFAULT '-', referringpage VARCHAR(300) DEFAULT '-', comment VARCHAR(300) DEFAULT '-');

@@ -1,0 +1,60 @@
+<div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <!--a href="index.html" class="site_title"><<span></span></a-->
+							{% load static %}
+							<img class="menu-logo" src="{% static 'images/dashboard45x45.png'%}">
+						</div>
+
+            <div class="clearfix"></div>
+
+            <!-- /menu profile quick info -->
+
+           
+
+            <!-- sidebar menu -->
+            <div id="" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu fixed-side">
+                  <li><a href="/home/"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  </li>
+									<li><a href="/dpactivities/"><i class="fa fa-table"></i> GDPR Audit Logs <span class="fa fa-chevron-down"></span></a>
+                  </li>                 
+									<li><a href="/dpcreate/"><i class="fa fa-clone"></i> Add GDPR Activity <span class="fa fa-chevron-down"></span></a>
+                  </li>
+                  <li><a href="/custpopup/"><i class="fa fa-edit"></i> GDPR Privacy Center <span class="fa fa-chevron-down"></span></a>
+                  </li>
+                  <li><a href="/settings/"><i class="fa fa-desktop"></i> Setup Wizard <span class="fa fa-chevron-down">
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle" style="padding-top: 5px;">
+                <a id="" style="margin-left: -5px; padding-left: 0px; font-size: 30px; color: #73879C; line-height: 47px; font-weight: 600;">{{page_title }}</a>
+              </div> 
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="/advancedsettings/" class="user-profile dropdown-toggle">
+                    <i class="fa fa-cog" style="font-size: 25px; color: #73879C;"></i>
+                  </a>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="/faq/" class="dropdown-toggle info-number">
+                    <i class="fa fa-question-circle" style="font-size: 25px; color: #73879C;"></i>
+                  </a>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->

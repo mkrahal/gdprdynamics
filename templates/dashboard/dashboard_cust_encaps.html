@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cusomize GDPR Notices | GDPR Compliance 360</title>
+
+   <!-- Bootstrap 3.3.7-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    
+		<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+		<!-- iCheck -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/flat/green.css" />
+
+		<!-- Custom Theme Style -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/custom.css' %}">
+
+    <!-- Font Selection -->
+  <link href="https://fonts.googleapis.com/css?family=Bangers|Bree+Serif|Carter+One|Exo+2|Indie+Flower|Josefin+Sans|Krona+One|Lato|Merriweather+Sans|Montserrat|Muli|Mystery+Quest|Nanum+Pen+Script|Open+Sans|Oswald|Pacifico|Raleway|Righteous|Roboto|Shadows+Into+Light|Ubuntu|Varela+Round" rel="stylesheet">
+
+   <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Color Picker JS -->
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/spectrum.css' %}">
+  <script type="text/javascript" src="{% static 'JS/spectrum.js' %}"></script>
+
+     <!-- Embedded Shopify App (initlaize the EASDK to make This script detects if your app was loaded inside an iframe. If not, it will create a redirection back into the relative embedded URL in the Shopify admin.-->
+    {% include "dashboard/EASDK_InitializeJS.html" %}
+  </head>
+
+  <body class="nav-sm">
+    <!--{% load static %}
+    <div>
+    <img src="{% static 'images/app_icon.png' %}">
+    GDPR Compliance 360
+    </div>-->
+    {% include "dashboard/EASDK_TopBar.html" %}
+    <div class="container body">
+      <div class="main_container">
+        {% include "dashboard/menu.html" %}
+
+        {% block content %}
+        {% endblock content %}
+
+      </div>
+
+    </div>
+
+    
+    <!-- iCheck -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="{% static 'stylesheets/custom.min.js' %}"></script>
+
+    
+  </body>
+</html>

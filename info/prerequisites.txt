@@ -1,0 +1,36 @@
+0. Register your app in shopify's partner backend, and get your API_KEY and SECRET
+
+0. Create MYSQL DB named:
+      GDPR_Audit_Logs
+    and set the db user & password in backendmodules/auditlogger.py
+    and add the following directive to /etc/mysql/my.cnf under [mysqld] section to allow expoting to external folders
+	secure_file_priv = ''
+
+1. Make migrations in django to create your tables from your predefined models using:
+   
+	$ python manage.py makemigrations
+	$ python manage.py migrate 
+
+
+2. Run Fixtures using $ python manage.py loaddata <fixturename> 
+    in this case: 
+    $ python manage.py loaddata dashboard/fixtures/default_styles_fixture.json
+    $ python manage.py loaddata dashboard/fixtures/font_map_fixture.json
+    $ python manage.py loaddata dashboard/fixtures/partner_details_fixture.json
+    $ python manage.py loaddata gdpr/fixtures/language_support_fixture.json
+
+3. Download the CITY database from https://dev.maxmind.com/geoip/geoip2/geolite2/ in binary format, and extract the tarball into the
+    ipdatabases/  directory and make sure the file is named 'GeoLite2-City.mmdb' once its extracted 
+
+
+4. Setup redirect_uri in installer/views.py
+
+
+5. Register your application with MailChimp, and get your Client_ID and Client Secret.
+
+
+6. Setup your mailchimp Client_ID, Client Secret, redirect_uri,
+    in dashboard/views.py mailchimpauth() function.
+
+7. Install libjpeg62 (its a dependency of Pillow, whic is a dependency of xhtml2pdf, which is used to render pdfs) 
+	sudo apt-get install libjpeg62-turbo-dev

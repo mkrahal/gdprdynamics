@@ -1,0 +1,70 @@
+[
+  {
+    "model": "dashboard.TemplateDefaults",
+    "pk": 1,
+    "fields": {
+      "template_name": "classic", 
+      "background_color": "#fff",
+      "text_color": "#22437c",
+      "active_tab_text_color": "#bbbbbb",
+      "secondary_text_color": "#bbbbbb",
+      "accept_color": "#22437c",
+      "decline_color": "#22437c",
+      "font_type": "roboto",
+      "font_size": "normal",
+      "widget_behaviour": "Default",
+      "time_delay": "0"
+    }
+  },
+  {
+      "model": "dashboard.TemplateDefaults",
+      "pk": 2,
+      "fields": {
+      "template_name": "retro", 
+      "background_color": "#fff",
+      "text_color": "#73879C",
+      "active_tab_text_color": "#555555",
+      "secondary_text_color": "#bbbbbb",
+      "accept_color": "#337ab7",
+      "decline_color": "#337ab7",
+      "font_type": "roboto",
+      "font_size": "normal",
+      "widget_behaviour": "Default",
+      "time_delay": "0"
+    }
+  },
+  {
+      "model": "dashboard.TemplateDefaults",
+      "pk": 3,
+      "fields": {
+      "template_name": "modern", 
+      "background_color": "#fff",
+      "text_color": "#ffffff",
+      "active_tab_text_color": "#ffffff",
+      "secondary_text_color": "#ffffff",
+      "accept_color": "#00a716",
+      "decline_color": "#e50001",
+      "font_type": "montserrat",
+      "font_size": "normal",
+      "widget_behaviour": "Default",
+      "time_delay": "0"
+    }
+  },
+  {
+      "model": "dashboard.TemplateDefaults",
+      "pk": 4,
+      "fields": {
+      "template_name": "elegant", 
+      "background_color": "#fff",
+      "text_color": "#00b38a",
+      "active_tab_text_color": "#00b38a",
+      "secondary_text_color": "#00b38a",
+      "accept_color": "#00b38a",
+      "decline_color": "#00b38a",
+      "font_type": "ubuntu",
+      "font_size": "normal",
+      "widget_behaviour": "Default",
+      "time_delay": "0"
+    }
+  }
+]
