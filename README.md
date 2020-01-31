@@ -7,13 +7,13 @@
 #### How it works:
 
 1. ###### Data Consent and Requests  
-          The app creates data policy notices, consent widgets, and a data request platform that integrate seemlessly with your Shopify store.
+   The app creates data policy notices, consent widgets, and a data request platform that integrate seemlessly with your Shopify store.
 
 2. ###### Data Processing  
-          As customer data is collected, the app automatically processes data events, data inquiries and data removal requests in real-time.
+   As customer data is collected, the app automatically processes data events, data inquiries and data removal requests in real-time.
 
 3. ###### Audit Logs  
-          All data processing activities are subsequently logged in the stores data registry. A streamlined audit log is rendered and ready to be exported.
+   All data processing activities are subsequently logged in the stores data registry. A streamlined audit log is rendered and ready to be exported.
 
 
 ## Features:
