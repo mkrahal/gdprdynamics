@@ -55,7 +55,7 @@ These instructions will get you a copy of the project up and running on your loc
 * Rabbit-mq
 * Supervisor
 * MaxMing GeoIP
-* For a complete list of required python libraries see [requirement.txt](https://github.com/mkrahal/gdprdynamics/blob/master/extras/requirements.txt)
+* For a complete list of required python libraries see [requirement.txt](https://github.com/mkrahal/gdprdynamics/blob/master/info/requirements.txt)
 * App must be hosted on a webserver with a valid SSL certificate (must use https protocol)
 
 ### Installing
