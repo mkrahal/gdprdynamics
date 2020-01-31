@@ -96,7 +96,7 @@ These instructions will get you a copy of the project up and running on your loc
 	$ python manage.py makemigrations
 	$ python manage.py migrate 
 	```
-9. Start services and run app
+9. Start services and run the app
 	```
 	$ sudo supervisorctl restart shopify_scaffolding_beat
 	$ sudo supervisorctl restart shopify_scaffolding
