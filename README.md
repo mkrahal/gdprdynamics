@@ -31,6 +31,16 @@ Features:
  
 -Export GDPR audit logs in multiple formats: csv, excel, pdf.
 
+## Screenshots
+
+![alt test](screenshots/1.png)
+
+![alt test](screenshots/2.png)
+
+![alt test](screenshots/3.png)
+
+![alt test](screenshots/4.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
