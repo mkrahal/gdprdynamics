@@ -2,7 +2,7 @@
 
 ![alt test](screenshots/1.png)
 
-##### GDPR 360 is an all-in-one Shopify app designed to assist merchants in taking the necessary steps to comply with the new European data protection regulations.
+**GDPR 360 is an all-in-one Shopify app designed to assist merchants in taking the necessary steps to comply with the new European data protection regulations.**
 
 ##### How it works:
 
