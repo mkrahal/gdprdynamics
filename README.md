@@ -7,32 +7,32 @@
 #### How it works:
 
 1. ###### Data Consent and Requests  
-The app creates data policy notices, consent widgets, and a data request platform that integrate seemlessly with your Shopify store.
+          The app creates data policy notices, consent widgets, and a data request platform that integrate seemlessly with your Shopify store.
 
 2. ###### Data Processing  
-As customer data is collected, the app automatically processes data events, data inquiries and data removal requests in real-time.
+          As customer data is collected, the app automatically processes data events, data inquiries and data removal requests in real-time.
 
 3. ###### Audit Logs  
-All data processing activities are subsequently logged in the stores data registry. A streamlined audit log is rendered and ready to be exported.
+          All data processing activities are subsequently logged in the stores data registry. A streamlined audit log is rendered and ready to be exported.
 
 
 ## Features:
  
--Creates front-end data policy notices and consent widgets.
+- Creates front-end data policy notices and consent widgets.
  
--Provides a front-end customer data request platform.
+- Provides a front-end customer data request platform.
  
--Automatically processes data requests (access and removal).
+- Automatically processes data requests (access and removal).
  
--Generates audit logs of your shop's data processing activities.
+- Generates audit logs of your shop's data processing activities.
  
--Smart geoIP filtering, GDPR widgets are only displayed to EU visitors.
+- Smart geoIP filtering, GDPR widgets are only displayed to EU visitors.
  
--Synchronizes data removal operations across your shopify store and your mailing lists with email service provider integration for MailChimp.
+- Synchronizes data removal operations across your shopify store and your mailing lists with email service provider integration for MailChimp.
  
--Multilinugual front-end GDPR data policy notices: English, French, German, Spanish, and Italian.
+- Multilinugual front-end GDPR data policy notices: English, French, German, Spanish, and Italian.
  
--Export GDPR audit logs in multiple formats: csv, excel, pdf.
+- Export GDPR audit logs in multiple formats: csv, excel, pdf.
 
 
 ## Screenshots
