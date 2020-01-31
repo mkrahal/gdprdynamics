@@ -1,21 +1,21 @@
-# GDPR Compliance 360 - Shopify App for GDPR Complaince 
+# GDPR 360 - Shopify App for GDPR Complaince 
 
 ![alt test](screenshots/1.png)
 
-GDPR Compliance 360 is an all-in-one Shopify app designed to assist merchants in taking the necessary steps to comply with the new European data protection regulations.
+######GDPR 360 is an all-in-one Shopify app designed to assist merchants in taking the necessary steps to comply with the new European data protection regulations.
 
-How it works:
+######How it works:
 
-1. Data Consent and Requests
+1. Data Consent and Requests  
 The app creates data policy notices, consent widgets, and a data request platform that integrate seemlessly with your Shopify store.
 
-2. Data Processing
+2. Data Processing  
 As customer data is collected, the app automatically processes data events, data inquiries and data removal requests in real-time.
 
-3. Audit Logs
+3. Audit Logs  
 All data processing activities are subsequently logged in the stores data registry. A streamlined audit log is rendered and ready to be exported.
 
-Features:
+######Features:
  
 -Creates front-end data policy notices and consent widgets.
  
