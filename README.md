@@ -15,7 +15,8 @@ As customer data is collected, the app automatically processes data events, data
 3. ###### Audit Logs  
 All data processing activities are subsequently logged in the stores data registry. A streamlined audit log is rendered and ready to be exported.
 
-#### Features:
+
+## Features:
  
 -Creates front-end data policy notices and consent widgets.
  
@@ -33,6 +34,7 @@ All data processing activities are subsequently logged in the stores data regist
  
 -Export GDPR audit logs in multiple formats: csv, excel, pdf.
 
+
 ## Screenshots
 
 ![alt test](screenshots/2.png)
@@ -40,6 +42,7 @@ All data processing activities are subsequently logged in the stores data regist
 ![alt test](screenshots/3.png)
 
 ![alt test](screenshots/4.png)
+
 
 ## Getting Started
 
@@ -101,10 +104,12 @@ These instructions will get you a copy of the project up and running on your loc
 	$ python manage.py runserver
 	```
 	
+
 ## Deployment
 
 DO NOT USE DJANGO DEVELOPMENT WEB SERVER IN A PRODUCTION SETTING. 
 Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).
+
 
 ## Built With
 
@@ -112,18 +117,22 @@ Production server should be run using a webserver / python engine combination (s
 * [DJANGO 1.11](https://www.djangoproject.com/)
 * [SHOPIFY Python API](https://github.com/Shopify/shopify_python_api)
 
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/mkrahal/djapify/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
 
 
 ## Built With
 
 * Python 2.7
 
+
 ## Authors
 
 * **MK RAHAL** - *Initial work* - [MK RAHAL](https://github.com/mkrahal)
+
 
 ## License
 
