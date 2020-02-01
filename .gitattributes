@@ -3,7 +3,6 @@ templates/404.html linguist-vendored
 templates/422.html linguist-vendored
 templates/500.html linguist-vendored
 templates/base.html linguist-vendored
-templates/dashboard/* linguist-vendored
 templates/emailtemplates/* linguist-vendored
 templates/installer/* linguist-vendored
 templates/scripttag_src/* linguist-vendored
