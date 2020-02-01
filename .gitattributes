@@ -1,1 +1,1 @@
-templates/dashboard export-ignore
+templates/dashboard/* export-ignore
