@@ -1,3 +1,2 @@
 static/stylesheets/* linguist-vendored
-templates/dashboard/* linguist-vendored
-templates/installer/* linguist-vendored
+templates/* linguist-vendored
